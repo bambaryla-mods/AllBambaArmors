@@ -9,7 +9,7 @@ card: icon:ABT_Apparel_IND_PrestigeCataphractHelmet,ABT_Apparel_AS_PrestigeMarin
 | Komandor Bambaryła | Design |
 | KylarZ | Testing and design breakdowns |
 | Pesky | All armor and helmet textures |
-| Samael Gray | XML definitions and Combat Extended patching |
+| Samael Gray | Initial XML definitions and Combat Extended patching |
 
 ## Inspirations
 
