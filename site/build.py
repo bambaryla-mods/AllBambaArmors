@@ -45,8 +45,8 @@ NAV = [
     ("Credits", [("credits", "Credits")]),
 ]
 
-GITHUB = "https://github.com/databobek/AllBambaArmors"
-SITE_URL = "https://databobek.github.io/AllBambaArmors/"  # for link previews
+GITHUB = "https://github.com/bambaryla-mods/AllBambaArmors"
+SITE_URL = "https://bambaryla-mods.github.io/AllBambaArmors/"  # for link previews
 SCREENSHOT_EXTS = (".png", ".jpg", ".jpeg", ".webp")
 
 

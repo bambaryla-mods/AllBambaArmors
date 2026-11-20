@@ -23,4 +23,4 @@ card: icon:ABT_Apparel_IND_PrestigeCataphractHelmet,ABT_Apparel_AS_PrestigeMarin
 
 ## This site
 
-The site is built from the mod's own files, on the same generator as the [Beyond Our Reach site](https://databobek.github.io/RimworldBeyondOurReach/). Headings use the Audiowide font (SIL Open Font License).
+The site is built from the mod's own files, on the same generator as the [Beyond Our Reach site](https://bambaryla-mods.github.io/RimworldBeyondOurReach/). Headings use the Audiowide font (SIL Open Font License).

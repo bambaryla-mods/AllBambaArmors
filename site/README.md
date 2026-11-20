@@ -1,6 +1,6 @@
 # Player site
 
-The site at https://databobek.github.io/AllBambaArmors/ shows players what Armors For All adds and what it needs. It is not part of the mod: `_PublisherPlus.xml` keeps this folder out of the Workshop upload. It runs on a trimmed copy of the Beyond Our Reach site generator.
+The site at https://bambaryla-mods.github.io/AllBambaArmors/ shows players what Armors For All adds and what it needs. It is not part of the mod: `_PublisherPlus.xml` keeps this folder out of the Workshop upload. It runs on a trimmed copy of the Beyond Our Reach site generator.
 
 ## How it works
 

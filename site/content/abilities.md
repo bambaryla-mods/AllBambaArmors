@@ -12,6 +12,6 @@ On RimWorld 1.6 only the glitter abilities exist. The rest need 1.7.
 
 ## With Beyond Our Reach
 
-When [Beyond Our Reach](https://databobek.github.io/RimworldBeyondOurReach/) is loaded too, its Solar, Kwazaari and Orientis armor gets another 22 abilities on the same energy system, from healing fields to orbital strikes. [BOR's site lists them](https://databobek.github.io/RimworldBeyondOurReach/bamba-integrations.html).
+When [Beyond Our Reach](https://bambaryla-mods.github.io/RimworldBeyondOurReach/) is loaded too, its Solar, Kwazaari and Orientis armor gets another 22 abilities on the same energy system, from healing fields to orbital strikes. [BOR's site lists them](https://bambaryla-mods.github.io/RimworldBeyondOurReach/bamba-integrations.html).
 
 The abilities started from the ones in *A RimWorld of Magic* by Torann. They were rebuilt from scratch for this mod and given new names that fit a sci-fi setting.
