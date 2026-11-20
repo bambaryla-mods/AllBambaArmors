@@ -15,13 +15,13 @@
 <link rel="stylesheet" href="assets/css/site.css">
 <script>
 /* Runs before the page paints: picks Vanilla or CE stats from ?mode= or the last choice. Without JS both tables show. */
-(function(r){r.classList.add("js");var m="vanilla";try{var p=new URLSearchParams(location.search).get("mode");m=(p==="ce"||p==="vanilla")?p:(localStorage.getItem("abt-mode")==="ce"?"ce":"vanilla")}catch(e){}r.setAttribute("data-mode",m)})(document.documentElement);
+(function(r){r.classList.add("js");var m="vanilla";try{var p=new URLSearchParams(location.search).get("mode");m=(p==="ce"||p==="vanilla")?p:(localStorage.getItem("bor-mode")==="ce"?"ce":"vanilla")}catch(e){}r.setAttribute("data-mode",m)})(document.documentElement);
 </script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="topbar">
-  <a class="brand brand-text" href="index.html">Armors For All</a>
+  <a class="brand" href="index.html"><img src="assets/favicon.png" alt="" width="28" height="28">Armors For All Tech Levels</a>
   <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="topnav">Menu</button>
   <nav id="topnav" class="topnav" aria-label="Sections">
     {% for group, entries in nav %}
@@ -36,9 +36,9 @@
   <div class="other-mods">
     <p class="other-mods-title">Other Bamba Mods</p>
     <ul>
-      <li><a href="https://bambaryla-mods.github.io/AllBambaGuns/">Guns For All</a> <a class="ws" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3782391721">Workshop</a></li>
-      <li><a href="https://bambaryla-mods.github.io/AllBambaMelee/">Melee Weapons For All</a> <a class="ws" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3726524693">Workshop</a></li>
-      <li><a href="https://bambaryla-mods.github.io/AllBambaTurrets/">Turrets For All</a> <a class="ws" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3800286808">Workshop</a></li>
+      <li><a href="https://bambaryla-mods.github.io/AllBambaGuns/">Guns For All Tech Levels</a> <a class="ws" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3782391721">Workshop</a></li>
+      <li><a href="https://bambaryla-mods.github.io/AllBambaMelee/">Melee Weapons For All Tech Levels</a> <a class="ws" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3726524693">Workshop</a></li>
+      <li><a href="https://bambaryla-mods.github.io/AllBambaTurrets/">Turrets For All Tech Levels</a> <a class="ws" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3800286808">Workshop</a></li>
       <li><a href="https://bambaryla-mods.github.io/RimworldBeyondOurReach/">Beyond Our Reach</a> <a class="ws" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3768354639">Workshop</a></li>
       <li><a href="https://bambaryla-mods.github.io/ResourceGeneratorFramework/">Resource Generator Framework</a> <a class="ws" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3768286295">Workshop</a></li>
       <li><a href="https://bambaryla-mods.github.io/rimworldExpeditions/">Expeditions</a></li>
