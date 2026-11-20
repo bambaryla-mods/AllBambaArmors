@@ -58,7 +58,7 @@
 	<VEF.Abilities.AbilityDef ParentName="ABT_ArcaneAttackBase">
 		<defName>ABT_AntiArmor</defName>
 		<label>fire armor-breaker round</label>
-		<description>Chamber a single Kwazaari armor-breaker round and fire it from the equipped gun, using the user's own aim. It hits for the gun's damage (at most 60). Against mechanoids, buildings and heavily armored pawns its penetrator core punches through for double damage, sets off small stunning blasts and shreds up to 4 pieces of worn apparel. Needs a ranged weapon.</description>
+		<description>Chamber a single armor-breaker round and fire it from the equipped gun, using the user's own aim. It hits for the gun's damage (at most 60). Against mechanoids, buildings and heavily armored pawns its penetrator core punches through for double damage, sets off small stunning blasts and shreds up to 4 pieces of worn apparel. Needs a ranged weapon.</description>
 		<iconPath>Icons/Arcane/AntiArmor</iconPath>
 		<abilityClass>AllBambaArmors.Ability_AntiArmor</abilityClass>
 		<targetMode>Pawn</targetMode>

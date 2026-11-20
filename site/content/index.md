@@ -8,7 +8,7 @@ Armors For All Post-Medieval Tech Levels adds seven armor sets, each with a matc
 
 - <span class="t-industrial">Armored suits</span> (industrial): the light, combat and heavy-duty suits, made at a machining table.
 - <span class="t-spacer">Advanced spacer</span>: flanker, vanguard and breacher armor, made at a fabrication bench.
-- <span class="t-ultra">Glitter</span> (ultratech): the glitter suit. You can't craft it; you buy it or earn it.
+- <span class="t-ultra">Glitter</span> (ultratech): the glitter suit. You buy it or earn it, or craft it if Beyond Our Reach is loaded.
 
 Every craftable set has its own research project, and each tech level has a backpack. With Royalty, the heavy-duty, vanguard and glitter sets also come in prestige versions.
 

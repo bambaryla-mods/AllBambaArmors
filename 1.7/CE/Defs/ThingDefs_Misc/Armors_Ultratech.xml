@@ -288,7 +288,7 @@
 			<li>ApparelArmor</li>
 		</thingCategories>
 		<tradeTags Inherit="False">
-			<li>ABT_GlitterPrestige</li>
+			<li>ABT_PrestigeArmor</li>
 		</tradeTags>
 		<apparel>
 			<immuneToToxGasExposure>true</immuneToToxGasExposure>
@@ -387,7 +387,7 @@
 			<li>ApparelArmor</li>
 		</thingCategories>
 		<tradeTags Inherit="False">
-			<li>ABT_GlitterPrestige</li>
+			<li>ABT_PrestigeArmor</li>
 		</tradeTags>
 		<apparel>
 			<bodyPartGroups>

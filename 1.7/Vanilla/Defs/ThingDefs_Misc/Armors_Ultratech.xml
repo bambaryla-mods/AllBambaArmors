@@ -12,7 +12,6 @@
 		<label>glitter helmet</label>
 		<description>A helmet which is a part of the entire glitter armor set. It has no name in the rim, it does not exist in the rim, it's a myth. It's beyond an armored helmet; it temporarily fuses with the user to be able to perform tasks and protect the wearer. Protection offered by the set is unparalleled and unachievable for the common rimworlder.</description>
 		<techLevel>Ultra</techLevel>
-		<costList />
 		<!-- <recipeMaker>
 			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
 			<researchPrerequisites>
@@ -56,7 +55,7 @@
 			<li>ApparelArmor</li>
 		</thingCategories>
 		<tradeTags>
-			<li>HiTechArmor</li>
+			<li>ABT_GlitterArmor</li>
 		</tradeTags>
 		<!-- <costList>
 			<ComponentSpacer>6</ComponentSpacer>
@@ -166,7 +165,7 @@
 			<li>ApparelArmor</li>
 		</thingCategories>
 		<tradeTags>
-			<li>HiTechArmor</li>
+			<li>ABT_GlitterArmor</li>
 		</tradeTags>
 		<!-- <costList>
 			<ComponentSpacer>24</ComponentSpacer>
@@ -271,7 +270,7 @@
 			<li>ApparelArmor</li>
 		</thingCategories>
 		<tradeTags>
-			<li>HiTechArmor</li>
+			<li>ABT_PrestigeArmor</li>
 		</tradeTags>
 		<apparel>
 			<bodyPartGroups>
@@ -363,7 +362,7 @@
 			<li>ApparelArmor</li>
 		</thingCategories>
 		<tradeTags>
-			<li>HiTechArmor</li>
+			<li>ABT_PrestigeArmor</li>
 		</tradeTags>
 		<apparel>
 			<bodyPartGroups>

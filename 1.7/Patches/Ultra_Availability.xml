@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-	<!-- Glitter armor and the ultra backpack. Only Empire pawns, high-tier traders and quest rewards provide them. With Beyond Our Reach they can be crafted as a parallel line to Solar, using plasteel and no BOR research. Without it they cannot be crafted. -->
+	<!-- Glitter armor and the ultra backpack. Only Empire pawns, high-tier traders and quest rewards provide them. All prestige armor (tag ABT_PrestigeArmor) is stocked only by Empire traders. With Beyond Our Reach they can be crafted as a parallel line to Solar, using plasteel and no BOR research. Without it they cannot be crafted. -->
 	<Operation Class="PatchOperationSequence">
 		<operations>
 			<li Class="PatchOperationAdd">
@@ -71,7 +71,7 @@
 					<xpath>Defs/TraderKindDef[defName="Orbital_Empire"]/stockGenerators</xpath>
 					<value>
 						<li Class="StockGenerator_Tag">
-							<tradeTag>ABT_GlitterPrestige</tradeTag>
+							<tradeTag>ABT_PrestigeArmor</tradeTag>
 							<thingDefCountRange>1~2</thingDefCountRange>
 							<countRange>1~1</countRange>
 						</li>
@@ -81,7 +81,7 @@
 					<xpath>Defs/TraderKindDef[defName="Base_Empire_Standard"]/stockGenerators</xpath>
 					<value>
 						<li Class="StockGenerator_Tag">
-							<tradeTag>ABT_GlitterPrestige</tradeTag>
+							<tradeTag>ABT_PrestigeArmor</tradeTag>
 							<thingDefCountRange>1~2</thingDefCountRange>
 							<countRange>1~1</countRange>
 						</li>

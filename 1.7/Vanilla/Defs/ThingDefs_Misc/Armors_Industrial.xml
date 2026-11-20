@@ -639,7 +639,7 @@
 			<li>ApparelArmor</li>
 		</thingCategories>
 		<tradeTags>
-			<li>HiTechArmor</li>
+			<li>ABT_PrestigeArmor</li>
 		</tradeTags>
 		<costList>
 			<ComponentIndustrial>3</ComponentIndustrial>
@@ -735,7 +735,7 @@
 			<li>ApparelArmor</li>
 		</thingCategories>
 		<tradeTags>
-			<li>HiTechArmor</li>
+			<li>ABT_PrestigeArmor</li>
 		</tradeTags>
 		<costList>
 			<ComponentIndustrial>10</ComponentIndustrial>
