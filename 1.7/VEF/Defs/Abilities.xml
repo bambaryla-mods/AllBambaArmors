@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Warp pack: short-range targeted teleport -->
+	<VEF.Abilities.AbilityDef>
+		<defName>ABT_WarpPack</defName>
+		<iconPath>Icons/Teleport</iconPath>
+		<label>warp pack</label>
+		<description>Fire the pack's warp coil to instantly relocate to a visible, unoccupied spot a short distance away.</description>
+		<abilityClass>AllBambaArmors.Ability_Warp</abilityClass>
+		<targetMode>Location</targetMode>
+		<range>11.9</range>
+		<castTime>0</castTime>
+		<cooldownTime>1500</cooldownTime>
+		<showUndrafted>true</showUndrafted>
+		<castFleck MayRequire="Ludeon.RimWorld.Royalty">PsycastSkipFlashEntry</castFleck>
+		<castFleckScale>1.5</castFleckScale>
+		<fleckOnTarget MayRequire="Ludeon.RimWorld.Royalty">PsycastSkipInnerExit</fleckOnTarget>
+		<fleckOnTargetScale>1.5</fleckOnTargetScale>
+		<modExtensions>
+			<li Class="AllBambaArmors.AbilityExtension_EnergyCost">
+				<cost>20</cost>
+			</li>
+		</modExtensions>
+	</VEF.Abilities.AbilityDef>
+
+	<!-- Night eyes: self only, instant, 2h duration, 12h cooldown -->
+	<VEF.Abilities.AbilityDef>
+		<defName>ABT_NightEyes</defName>
+		<iconPath>Icons/NightEyes</iconPath>
+		<label>night eyes</label>
+		<description>Switch the wearer's optics to low-light mode. For 2 hours, darkness no longer hurts shooting accuracy, melee hit chance or melee dodge.</description>
+		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+		<targetMode>Self</targetMode>
+		<castTime>0</castTime>
+		<durationTime>5000</durationTime>
+		<cooldownTime>30000</cooldownTime>
+		<showUndrafted>true</showUndrafted>
+		<modExtensions>
+			<li Class="AllBambaArmors.AbilityExtension_EnergyCost">
+				<cost>15</cost>
+			</li>
+			<li Class="VEF.Abilities.AbilityExtension_Hediff">
+				<hediff>ABT_NightEyesHediff</hediff>
+				<applyToCaster>true</applyToCaster>
+			</li>
+		</modExtensions>
+	</VEF.Abilities.AbilityDef>
+
+	<!-- Flare burst: self-centered fire explosion, 3 day cooldown -->
+	<VEF.Abilities.AbilityDef>
+		<defName>ABT_FlareBurst</defName>
+		<iconPath>Icons/boom</iconPath>
+		<label>flare burst</label>
+		<description>Vent a burst of flammable gas around the wearer and ignite it. The blast sets nearby targets alight but deals only light damage, and the wearer is unharmed.</description>
+		<abilityClass>AllBambaArmors.Ability_FlareBurst</abilityClass>
+		<targetMode>Self</targetMode>
+		<radius>4.9</radius>
+		<castTime>30</castTime>
+		<cooldownTime>180000</cooldownTime>
+		<showUndrafted>true</showUndrafted>
+		<modExtensions>
+			<li Class="AllBambaArmors.AbilityExtension_EnergyCost">
+				<cost>40</cost>
+			</li>
+			<li Class="VEF.Abilities.AbilityExtension_Explosion">
+				<explosionRadius>4.9</explosionRadius>
+				<explosionDamageDef>Flame</explosionDamageDef>
+				<explosionDamageAmount>8</explosionDamageAmount>
+				<chanceToStartFire>0.6</chanceToStartFire>
+				<onCaster>true</onCaster>
+				<casterImmune>true</casterImmune>
+			</li>
+		</modExtensions>
+	</VEF.Abilities.AbilityDef>
+
+	<!-- Aegis veil: other pawns only, 1200 ticks, 6h cooldown -->
+	<VEF.Abilities.AbilityDef>
+		<defName>ABT_AegisVeil</defName>
+		<iconPath>Icons/AegisVeil</iconPath>
+		<label>aegis veil</label>
+		<description>Project a protective veil onto another pawn. For a short time, ranged attacks cannot harm them.</description>
+		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+		<targetMode>Pawn</targetMode>
+		<targetingParameters>
+			<canTargetPawns>true</canTargetPawns>
+			<canTargetSelf>false</canTargetSelf>
+			<canTargetBuildings>false</canTargetBuildings>
+			<canTargetAnimals>false</canTargetAnimals>
+			<canTargetMechs>false</canTargetMechs>
+		</targetingParameters>
+		<range>9.9</range>
+		<castTime>30</castTime>
+		<durationTime>1200</durationTime>
+		<cooldownTime>15000</cooldownTime>
+		<showUndrafted>true</showUndrafted>
+		<modExtensions>
+			<li Class="AllBambaArmors.AbilityExtension_EnergyCost">
+				<cost>35</cost>
+			</li>
+			<li Class="VEF.Abilities.AbilityExtension_Hediff">
+				<hediff>ABT_AegisVeilHediff</hediff>
+			</li>
+		</modExtensions>
+	</VEF.Abilities.AbilityDef>
+
+	<!-- Sprint surge: self buff, 12h cooldown -->
+	<VEF.Abilities.AbilityDef>
+		<defName>ABT_SprintSurge</defName>
+		<iconPath>Icons/SpeedBoost</iconPath>
+		<label>sprint surge</label>
+		<description>Overdrive the wearer's movement assist, doubling movement speed for a short time.</description>
+		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+		<targetMode>Self</targetMode>
+		<castTime>0</castTime>
+		<durationTime>2500</durationTime>
+		<cooldownTime>30000</cooldownTime>
+		<showUndrafted>true</showUndrafted>
+		<modExtensions>
+			<li Class="AllBambaArmors.AbilityExtension_EnergyCost">
+				<cost>25</cost>
+			</li>
+			<li Class="VEF.Abilities.AbilityExtension_Hediff">
+				<hediff>ABT_SprintSurgeHediff</hediff>
+				<applyToCaster>true</applyToCaster>
+			</li>
+		</modExtensions>
+	</VEF.Abilities.AbilityDef>
+
+	<!-- Invisibility: self buff, 12h cooldown -->
+	<VEF.Abilities.AbilityDef>
+		<defName>ABT_Invisibility</defName>
+		<iconPath>Icons/Invisibility</iconPath>
+		<label>cloak</label>
+		<description>Bend perception around the wearer, making them invisible to others for a short time.</description>
+		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+		<targetMode>Self</targetMode>
+		<castTime>0</castTime>
+		<durationTime>2500</durationTime>
+		<cooldownTime>30000</cooldownTime>
+		<showUndrafted>true</showUndrafted>
+		<modExtensions>
+			<li Class="AllBambaArmors.AbilityExtension_EnergyCost">
+				<cost>40</cost>
+			</li>
+			<li Class="VEF.Abilities.AbilityExtension_Hediff">
+				<hediff>ABT_InvisibilityHediff</hediff>
+				<applyToCaster>true</applyToCaster>
+			</li>
+		</modExtensions>
+	</VEF.Abilities.AbilityDef>
+
+</Defs>
+
+
+
+

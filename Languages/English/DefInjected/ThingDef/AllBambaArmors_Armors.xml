@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <ABT_Apparel_IND_ReconHelmet.label>light helmet</ABT_Apparel_IND_ReconHelmet.label>
+  <ABT_Apparel_IND_ReconHelmet.description>Offers basic protection from the elements, gunfire and related shrapnel. Mainly utilized by support personnel. Should not be deployed against mechanized threats.</ABT_Apparel_IND_ReconHelmet.description>
+  <ABT_Apparel_IND_ReconArmor.label>light suit</ABT_Apparel_IND_ReconArmor.label>
+  <ABT_Apparel_IND_ReconArmor.description>Offers basic protection from the elements, gunfire and related shrapnel. Mainly utilized by support personnel. Should not be deployed against mechanized threats.</ABT_Apparel_IND_ReconArmor.description>
+  <ABT_Apparel_IND_MarineHelmet.label>combat helmet</ABT_Apparel_IND_MarineHelmet.label>
+  <ABT_Apparel_IND_MarineHelmet.description>A companion to the light line of suits, the combat variant offers better protection and durability for frontline combat. While it is decent for surviving suppressing fire, it will still buckle against large calibers and high explosives.</ABT_Apparel_IND_MarineHelmet.description>
+  <ABT_Apparel_IND_MarineArmor.label>combat suit</ABT_Apparel_IND_MarineArmor.label>
+  <ABT_Apparel_IND_MarineArmor.description>A companion to the light line of suits, the combat variant offers better protection and durability for frontline combat. While it is decent for surviving suppressing fire, it will still buckle against large calibers and high explosives.</ABT_Apparel_IND_MarineArmor.description>
+  <ABT_Apparel_IND_CataphractHelmet.label>heavy-duty helmet</ABT_Apparel_IND_CataphractHelmet.label>
+  <ABT_Apparel_IND_CataphractHelmet.description>The heavy-duty helmet is the heaviest of the heavy protection you can get before having to power the armor. Designed as bomb-squad protection minus the bulkiness, the heavy-duty helmet will survive most conventional threats.</ABT_Apparel_IND_CataphractHelmet.description>
+  <ABT_Apparel_IND_CataphractArmor.label>heavy-duty suit</ABT_Apparel_IND_CataphractArmor.label>
+  <ABT_Apparel_IND_CataphractArmor.description>The heavy-duty suit is the heaviest of the heavy protection you can get before having to power the armor. Designed as bomb-squad protection minus the bulkiness, the heavy-duty suit will survive most conventional threats.</ABT_Apparel_IND_CataphractArmor.description>
+  <ABT_Apparel_IND_PrestigeCataphractHelmet.label>prestige heavy-duty helmet</ABT_Apparel_IND_PrestigeCataphractHelmet.label>
+  <ABT_Apparel_IND_PrestigeCataphractHelmet.description>A prestige, noble version of the original Heavy-Duty Helmet that trades protection for flair. The heavy-duty helmet is the heaviest of the heavy protection you can get before having to power the armor. Designed as bomb-squad protection minus the bulkiness, the heavy-duty helmet will survive most conventional threats.</ABT_Apparel_IND_PrestigeCataphractHelmet.description>
+  <ABT_Apparel_IND_PrestigeCataphractArmor.label>prestige heavy-duty suit</ABT_Apparel_IND_PrestigeCataphractArmor.label>
+  <ABT_Apparel_IND_PrestigeCataphractArmor.description>A prestige, noble version of the original Heavy-Duty Suit that trades protection for flair. The heavy-duty suit is the heaviest of the heavy protection you can get before having to power the armor. Designed as bomb-squad protection minus the bulkiness, the heavy-duty suit will survive most conventional threats.</ABT_Apparel_IND_PrestigeCataphractArmor.description>
+
+  <ABT_Apparel_AS_ReconHelmet.label>flanker helmet</ABT_Apparel_AS_ReconHelmet.label>
+  <ABT_Apparel_AS_ReconHelmet.description>Light and agile powered helmet designed as combat replacement of the recon armors. In terms of protection, it's a marine armor with reduced weight and increased mobility.</ABT_Apparel_AS_ReconHelmet.description>
+  <ABT_Apparel_AS_ReconArmor.label>flanker armor</ABT_Apparel_AS_ReconArmor.label>
+  <ABT_Apparel_AS_ReconArmor.description>Light and agile powered suit of armor designed as combat replacement of the recon armors. In terms of protection, it's a marine armor with reduced weight and increased mobility.</ABT_Apparel_AS_ReconArmor.description>
+  <ABT_Apparel_AS_MarineHelmet.label>vanguard helmet</ABT_Apparel_AS_MarineHelmet.label>
+  <ABT_Apparel_AS_MarineHelmet.description>The mainstay of modern militaries outside of the rim. Offering a cataphract-level of protection without the induced mobility cost, Vanguard marines laugh in the face of danger.</ABT_Apparel_AS_MarineHelmet.description>
+  <ABT_Apparel_AS_MarineArmor.label>vanguard armor</ABT_Apparel_AS_MarineArmor.label>
+  <ABT_Apparel_AS_MarineArmor.description>The mainstay of modern militaries outside of the rim. Offering a cataphract-level of protection without the induced mobility cost, Vanguard marines laugh in the face of danger.</ABT_Apparel_AS_MarineArmor.description>
+  <ABT_Apparel_AS_CataphractHelmet.label>breacher helmet</ABT_Apparel_AS_CataphractHelmet.label>
+  <ABT_Apparel_AS_CataphractHelmet.description>Space marine special used in combat deployments in the firey hell of space combat zones, Breacher helmets are used to get through PD cannon fire onto an enemy ship. They are heavy and hardly-penetrable.</ABT_Apparel_AS_CataphractHelmet.description>
+  <ABT_Apparel_AS_CataphractArmor.label>breacher armor</ABT_Apparel_AS_CataphractArmor.label>
+  <ABT_Apparel_AS_CataphractArmor.description>Space marine-issued armor for combat deployments in the firey hell of space combat zones, Breacher armors are used to get through PD cannon fire onto an enemy ship. They are heavy and hardly-penetrable.</ABT_Apparel_AS_CataphractArmor.description>
+  <ABT_Apparel_AS_PrestigeMarineHelmet.label>prestige vanguard helmet</ABT_Apparel_AS_PrestigeMarineHelmet.label>
+  <ABT_Apparel_AS_PrestigeMarineHelmet.description>A prestige, noble version of the original Vanguard helmet, that trades protection for flair. The mainstay of modern militaries outside of the rim. Offering a cataphract-level of protection without the induced mobility cost, Vanguard marines laugh in the face of danger.</ABT_Apparel_AS_PrestigeMarineHelmet.description>
+  <ABT_Apparel_AS_PrestigeMarineArmor.label>prestige vanguard armor</ABT_Apparel_AS_PrestigeMarineArmor.label>
+  <ABT_Apparel_AS_PrestigeMarineArmor.description>A prestige, noble version of the original Vanguard armor, that trades protection for flair. The mainstay of modern militaries outside of the rim. Offering a cataphract-level of protection without the induced mobility cost, Vanguard marines laugh in the face of danger.</ABT_Apparel_AS_PrestigeMarineArmor.description>
+
+  <ABT_Apparel_Ultra_Helmet.label>glitter helmet</ABT_Apparel_Ultra_Helmet.label>
+  <ABT_Apparel_Ultra_Helmet.description>A helmet which is a part of the entire glitter armor set. It has no name in the rim, it does not exist in the rim, it's a myth. It's beyond an armored helmet; it temporarily fuses with the user to be able to perform tasks and protect the wearer. Protection offered by the set is unparalleled and unachievable for the common rimworlder.</ABT_Apparel_Ultra_Helmet.description>
+  <ABT_Apparel_Ultra_Armor.label>glitter suit</ABT_Apparel_Ultra_Armor.label>
+  <ABT_Apparel_Ultra_Armor.description>A suit of armor which is a part of the entire glitter armor set. It has no name in the rim, it does not exist in the rim, it's a myth. It's beyond an armored suit; it temporarily fuses with the user to be able to perform tasks and protect the wearer. Protection offered by the set is unparalleled and unachievable for the common rimworlder.</ABT_Apparel_Ultra_Armor.description>
+  <ABT_Apparel_Ultra_PrestigeHelmet.label>prestige glitter helmet</ABT_Apparel_Ultra_PrestigeHelmet.label>
+  <ABT_Apparel_Ultra_PrestigeHelmet.description>A prestige, noble version of the original Glitter Helmet, that trades protection for flair. A helmet which is a part of the entire glitter armor set. It has no name in the rim, it does not exist in the rim, it's a myth. It's beyond an armored helmet; it temporarily fuses with the user to be able to perform tasks and protect the wearer. Protection offered by the set is unparalleled and unachievable for the common rimworlder.</ABT_Apparel_Ultra_PrestigeHelmet.description>
+  <ABT_Apparel_Ultra_PrestigeArmor.label>prestige glitter suit</ABT_Apparel_Ultra_PrestigeArmor.label>
+  <ABT_Apparel_Ultra_PrestigeArmor.description>A prestige, noble version of the original Glitter Suit, that trades protection for flair. A suit of armor which is a part of the entire glitter armor set. It has no name in the rim, it does not exist in the rim, it's a myth. It's beyond an armored suit; it temporarily fuses with the user to be able to perform tasks and protect the wearer. Protection offered by the set is unparalleled and unachievable for the common rimworlder.</ABT_Apparel_Ultra_PrestigeArmor.description>
+</LanguageData>

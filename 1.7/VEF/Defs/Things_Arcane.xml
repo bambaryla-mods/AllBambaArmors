@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Projectiles, lingering fields and helper things for Abilities_Arcane.xml. -->
+
+	<!-- ===== Projectiles ===== -->
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>ABT_EMPBolt</defName>
+		<label>EMP bolt</label>
+		<thingClass>Projectile_Explosive</thingClass>
+		<graphicData>
+			<texPath>Things/Projectile/LauncherShot</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<color>(68,150,215)</color>
+		</graphicData>
+		<projectile>
+			<damageDef>EMP</damageDef>
+			<damageAmountBase>100</damageAmountBase>
+			<explosionRadius>7</explosionRadius>
+			<speed>40</speed>
+			<soundExplode>Explosion_EMP</soundExplode>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>ABT_AntiArmorRound</defName>
+		<label>armor-breaker round</label>
+		<thingClass>AllBambaArmors.Projectile_AntiArmor</thingClass>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Big</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.4</drawSize>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>10</damageAmountBase>
+			<stoppingPower>2</stoppingPower>
+			<speed>110</speed>
+		</projectile>
+	</ThingDef>
+
+	<!-- ===== Lingering fields (AbilityField) ===== -->
+
+	<ThingDef Name="ABT_AbilityFieldBase" ParentName="EtherealThingBase" Abstract="True">
+		<tickerType>Normal</tickerType>
+		<seeThroughFog>true</seeThroughFog>
+	</ThingDef>
+
+</Defs>

@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<!-- Glitter armor and the ultra backpack. Only Empire pawns, high-tier traders and quest rewards provide them. With Beyond Our Reach they can be crafted as a parallel line to Solar, using plasteel and no BOR research. Without it they cannot be crafted. -->
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/TraderKindDef[defName="Orbital_Exotic"]/stockGenerators</xpath>
+				<value>
+					<li Class="StockGenerator_Tag">
+						<tradeTag>ABT_GlitterArmor</tradeTag>
+						<thingDefCountRange>1~2</thingDefCountRange>
+						<countRange>1~1</countRange>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/TraderKindDef[defName="Orbital_CombatSupplier"]/stockGenerators</xpath>
+				<value>
+					<li Class="StockGenerator_Tag">
+						<tradeTag>ABT_GlitterArmor</tradeTag>
+						<thingDefCountRange>1~2</thingDefCountRange>
+						<countRange>1~1</countRange>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="ABA_Backpack_Ultra"]</xpath>
+				<value>
+					<tradeTags Inherit="False">
+						<li>ABT_GlitterArmor</li>
+					</tradeTags>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="ABA_Backpack_Ultra"]</xpath>
+				<value>
+					<thingSetMakerTags>
+						<li>RewardStandardMidFreq</li>
+					</thingSetMakerTags>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Royalty</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/TraderKindDef[defName="Orbital_Empire"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>ABT_GlitterArmor</tradeTag>
+							<thingDefCountRange>1~2</thingDefCountRange>
+							<countRange>1~1</countRange>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/TraderKindDef[defName="Base_Empire_Standard"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>ABT_GlitterArmor</tradeTag>
+							<thingDefCountRange>1~2</thingDefCountRange>
+							<countRange>1~1</countRange>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/TraderKindDef[defName="Orbital_Empire"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>ABT_GlitterPrestige</tradeTag>
+							<thingDefCountRange>1~2</thingDefCountRange>
+							<countRange>1~1</countRange>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/TraderKindDef[defName="Base_Empire_Standard"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>ABT_GlitterPrestige</tradeTag>
+							<thingDefCountRange>1~2</thingDefCountRange>
+							<countRange>1~1</countRange>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/FactionDef[defName="Empire"]/pawnGroupMakers/li[kindDef="Combat"]/options</xpath>
+					<value>
+						<ABT_Empire_GlitterGuardRanged>0.7</ABT_Empire_GlitterGuardRanged>
+						<ABT_Empire_GlitterGuardMelee>0.3</ABT_Empire_GlitterGuardMelee>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/FactionDef[defName="Empire"]/pawnGroupMakers/li[kindDef="Settlement"]/options</xpath>
+					<value>
+						<ABT_Empire_GlitterGuardRanged>0.7</ABT_Empire_GlitterGuardRanged>
+						<ABT_Empire_GlitterGuardMelee>0.3</ABT_Empire_GlitterGuardMelee>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Beyond Our Reach</li>
+			<li>Beyond Our Reach :: Redux</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+						<ResearchProjectDef>
+							<defName>ABT_Research_GlitterArmor</defName>
+							<label>glitter armor</label>
+							<description>Reconstruct the glitter armor set from glitterworld fabrication methods, using materials your colony can already make.</description>
+							<baseCost>120000</baseCost>
+							<techLevel>Ultra</techLevel>
+							<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+							<requiredResearchFacilities>
+								<li>MultiAnalyzer</li>
+							</requiredResearchFacilities>
+							<prerequisites>
+								<li>ABT_Research_AS_CataphractArmor</li>
+								<li>ShieldBelt</li>
+								<li>AdvancedFabrication</li>
+								<li>MultiAnalyzer</li>
+							</prerequisites>
+							<tab>ABT_Research_Tab</tab>
+							<researchViewX>7.00</researchViewX>
+							<researchViewY>6.50</researchViewY>
+						</ResearchProjectDef>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="ABT_Apparel_Ultra_Helmet"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>14250</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="ABT_Apparel_Ultra_Helmet"]</xpath>
+					<value>
+						<recipeMaker>
+							<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+							<workSkill>Crafting</workSkill>
+							<effectWorking>Smith</effectWorking>
+							<soundWorking>Recipe_Machining</soundWorking>
+							<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+							<researchPrerequisite>ABT_Research_GlitterArmor</researchPrerequisite>
+							<skillRequirements>
+								<Crafting>18</Crafting>
+							</skillRequirements>
+							<recipeUsers>
+								<li>FabricationBench</li>
+							</recipeUsers>
+						</recipeMaker>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="ABT_Apparel_Ultra_Helmet"]</xpath>
+					<value>
+						<costList>
+							<ComponentSpacer>6</ComponentSpacer>
+							<Plasteel>200</Plasteel>
+							<Hyperweave>50</Hyperweave>
+							<BroadshieldCore MayRequire="Ludeon.RimWorld.Royalty">1</BroadshieldCore>
+						</costList>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="ABT_Apparel_Ultra_Armor"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>24500</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="ABT_Apparel_Ultra_Armor"]</xpath>
+					<value>
+						<recipeMaker>
+							<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+							<workSkill>Crafting</workSkill>
+							<effectWorking>Smith</effectWorking>
+							<soundWorking>Recipe_Machining</soundWorking>
+							<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+							<researchPrerequisite>ABT_Research_GlitterArmor</researchPrerequisite>
+							<skillRequirements>
+								<Crafting>18</Crafting>
+							</skillRequirements>
+							<recipeUsers>
+								<li>FabricationBench</li>
+							</recipeUsers>
+						</recipeMaker>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="ABT_Apparel_Ultra_Armor"]</xpath>
+					<value>
+						<costList>
+							<ComponentSpacer>24</ComponentSpacer>
+							<Plasteel>400</Plasteel>
+							<Uranium>150</Uranium>
+							<Hyperweave>50</Hyperweave>
+						</costList>
+					</value>
+				</li>
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="ABT_Apparel_Ultra_PrestigeHelmet"]</xpath>
+					<match Class="PatchOperationSequence">
+						<operations>
+							<li Class="PatchOperationReplace">
+								<xpath>Defs/ThingDef[defName="ABT_Apparel_Ultra_PrestigeHelmet"]/statBases/MarketValue</xpath>
+								<value>
+									<MarketValue>18000</MarketValue>
+								</value>
+							</li>
+							<li Class="PatchOperationAdd">
+								<xpath>Defs/ThingDef[defName="ABT_Apparel_Ultra_PrestigeHelmet"]</xpath>
+								<value>
+									<recipeMaker>
+										<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+										<workSkill>Crafting</workSkill>
+										<effectWorking>Smith</effectWorking>
+										<soundWorking>Recipe_Machining</soundWorking>
+										<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+										<researchPrerequisite>ABT_Research_GlitterArmor</researchPrerequisite>
+										<skillRequirements>
+											<Crafting>18</Crafting>
+										</skillRequirements>
+										<recipeUsers>
+											<li>FabricationBench</li>
+										</recipeUsers>
+									</recipeMaker>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>Defs/ThingDef[defName="ABT_Apparel_Ultra_PrestigeHelmet"]/costList</xpath>
+								<value>
+									<costList>
+										<ComponentSpacer>5</ComponentSpacer>
+										<Plasteel>175</Plasteel>
+										<Hyperweave>44</Hyperweave>
+										<BroadshieldCore MayRequire="Ludeon.RimWorld.Royalty">1</BroadshieldCore>
+									</costList>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="ABT_Apparel_Ultra_PrestigeArmor"]</xpath>
+					<match Class="PatchOperationSequence">
+						<operations>
+							<li Class="PatchOperationReplace">
+								<xpath>Defs/ThingDef[defName="ABT_Apparel_Ultra_PrestigeArmor"]/statBases/MarketValue</xpath>
+								<value>
+									<MarketValue>36000</MarketValue>
+								</value>
+							</li>
+							<li Class="PatchOperationAdd">
+								<xpath>Defs/ThingDef[defName="ABT_Apparel_Ultra_PrestigeArmor"]</xpath>
+								<value>
+									<recipeMaker>
+										<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+										<workSkill>Crafting</workSkill>
+										<effectWorking>Smith</effectWorking>
+										<soundWorking>Recipe_Machining</soundWorking>
+										<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+										<researchPrerequisite>ABT_Research_GlitterArmor</researchPrerequisite>
+										<skillRequirements>
+											<Crafting>18</Crafting>
+										</skillRequirements>
+										<recipeUsers>
+											<li>FabricationBench</li>
+										</recipeUsers>
+									</recipeMaker>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>Defs/ThingDef[defName="ABT_Apparel_Ultra_PrestigeArmor"]/costList</xpath>
+								<value>
+									<costList>
+										<ComponentSpacer>21</ComponentSpacer>
+										<Plasteel>350</Plasteel>
+										<Uranium>131</Uranium>
+										<Hyperweave>44</Hyperweave>
+									</costList>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="ABA_Backpack_Ultra"]/costList</xpath>
+					<value>
+						<costList>
+							<Hyperweave>80</Hyperweave>
+							<ComponentSpacer>3</ComponentSpacer>
+						</costList>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="ABA_Backpack_Ultra"]/recipeMaker</xpath>
+					<value>
+						<researchPrerequisite>ABT_Research_GlitterArmor</researchPrerequisite>
+					</value>
+				</li>
+			</operations>
+		</match>
+		<nomatch Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="ABA_Backpack_Ultra"]/recipeMaker</xpath>
+					<value>
+						<recipeMaker Inherit="False" />
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="ABA_Backpack_Ultra"]/statBases</xpath>
+					<value>
+						<MarketValue>900</MarketValue>
+					</value>
+				</li>
+			</operations>
+		</nomatch>
+	</Operation>
+</Patch>

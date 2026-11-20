@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!-- Shared by Vanilla and Combat Extended variants (same defNames). Prestige items need Royalty; success=Always keeps the patch quiet if absent. -->
+
+	<Operation Class="PatchOperationAdd" success="Always">
+		<xpath>Defs/ThingDef[defName="ABT_Apparel_Ultra_Helmet"]/comps</xpath>
+		<value>
+			<li Class="VEF.Abilities.CompProperties_AbilitiesApparel">
+				<abilities>
+					<li>ABT_NightEyes</li>
+				</abilities>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd" success="Always">
+		<xpath>Defs/ThingDef[defName="ABT_Apparel_Ultra_Armor"]/comps</xpath>
+		<value>
+			<li Class="VEF.Abilities.CompProperties_AbilitiesApparel">
+				<abilities>
+					<li>ABT_SprintSurge</li>
+					<li>ABT_WarpPack</li>
+				</abilities>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd" success="Always">
+		<xpath>Defs/ThingDef[defName="ABT_Apparel_Ultra_PrestigeHelmet"]/comps</xpath>
+		<value>
+			<li Class="VEF.Abilities.CompProperties_AbilitiesApparel">
+				<abilities>
+					<li>ABT_AegisVeil</li>
+				</abilities>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd" success="Always">
+		<xpath>Defs/ThingDef[defName="ABT_Apparel_Ultra_PrestigeArmor"]/comps</xpath>
+		<value>
+			<li Class="VEF.Abilities.CompProperties_AbilitiesApparel">
+				<abilities>
+					<li>ABT_Invisibility</li>
+					<li>ABT_FlareBurst</li>
+				</abilities>
+			</li>
+		</value>
+	</Operation>
+
+</Patch>

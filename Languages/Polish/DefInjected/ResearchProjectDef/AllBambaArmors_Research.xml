@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <ABT_Research_Tab.label>Technologie All-Bamba</ABT_Research_Tab.label>
+  <ABT_Research_Tab.generalTitle>Badania dla przedmiotów z serii All-Bamba</ABT_Research_Tab.generalTitle>
+  <ABT_Research_Tab.generalDescription>Odblokowuje przedmioty z różnych poziomów technologicznych.</ABT_Research_Tab.generalDescription>
+
+  <ABT_Research_IND_ReconArmor.label>lekki kombinezon</ABT_Research_IND_ReconArmor.label>
+  <ABT_Research_IND_ReconArmor.description>Oferuje podstawową ochronę przed żywiołami, ogniem i odpryskami. Używany głównie przez personel pomocniczy. Nie powinien być używany przeciwko zmechanizowanym zagrożeniom.</ABT_Research_IND_ReconArmor.description>
+  <ABT_Research_IND_MarineArmor.label>kombinezon bojowy</ABT_Research_IND_MarineArmor.label>
+  <ABT_Research_IND_MarineArmor.description>Wersja uzupełniająca lekką linię kombinezonów, oferująca lepszą ochronę i trwałość do walki na pierwszej linii. Dobrze radzi sobie z ostrzałem zaporowym, ale i tak ustąpi przed dużymi kalibrami i materiałami wybuchowymi.</ABT_Research_IND_MarineArmor.description>
+  <ABT_Research_IND_CataphractArmor.label>ciężki kombinezon</ABT_Research_IND_CataphractArmor.label>
+  <ABT_Research_IND_CataphractArmor.description>Ciężki kombinezon to najcięższa ochrona, jaką można uzyskać przed zasilanym pancerzem. Zaprojektowany jako ochrona saperska bez nadmiernej masy, wytrzyma większość konwencjonalnych zagrożeń.</ABT_Research_IND_CataphractArmor.description>
+
+  <ABT_Research_AS_ReconArmor.label>zbroja skrzydłowego</ABT_Research_AS_ReconArmor.label>
+  <ABT_Research_AS_ReconArmor.description>Lekki i zwrotny zasilany pancerz zaprojektowany jako wojskowy odpowiednik zbroi zwiadowczej. W zakresie ochrony odpowiada pancerzowi morskiego typu przy mniejszej wadze.</ABT_Research_AS_ReconArmor.description>
+  <ABT_Research_AS_MarineArmor.label>zbroja awangardy</ABT_Research_AS_MarineArmor.label>
+  <ABT_Research_AS_MarineArmor.description>Podstawa nowoczesnych armii poza obrzeżem. Oferuje ochronę na poziomie kataphractu bez kosztu mobilności, dzięki czemu żołnierze awangardy śmieją się niebezpieczeństwu w twarz.</ABT_Research_AS_MarineArmor.description>
+  <ABT_Research_AS_CataphractArmor.label>zbroja szturmowa</ABT_Research_AS_CataphractArmor.label>
+  <ABT_Research_AS_CataphractArmor.description>Pancerz kosmiczny używany w bojowych strefach przestrzeni pełnych ognia. Zbroja szturmowa pozwala przebić się przez ogień dział PD, jest ciężka i trudna do penetracji.</ABT_Research_AS_CataphractArmor.description>
+</LanguageData>

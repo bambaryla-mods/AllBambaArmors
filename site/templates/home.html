@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block description %}{{ meta.get("summary") or "A RimWorld mod that adds armor and helmets for three tech levels: industrial armored suits, advanced spacer armor and glitter armor." }}{% endblock %}
+{% block body %}
+<section class="hero">
+  <div class="hero-art" style="background-image:url(assets/preview.png)" role="img" aria-label="The mod's armor sets"></div>
+  <div class="hero-inner">
+    <h1 class="hero-title">Armors For All Post-Medieval Tech Levels</h1>
+    <p class="tagline">{{ meta.get("tagline", "") }}</p>
+    <p class="cta">
+      <a class="btn primary" href="{{ workshop }}">Steam Workshop</a>
+      <a class="btn" href="{{ github }}">GitHub</a>
+    </p>
+  </div>
+</section>
+<main id="main" class="home">
+  <div class="home-intro">{{ content }}</div>
+  <h2 class="cards-head">What's in the mod</h2>
+  <div class="cards">
+    {% for c in cards %}
+    <a class="card" href="{{ c.slug }}.html">
+      {% if c.card.kind == "banner" %}
+      <div class="thumb" style="background-image:url({{ c.card.src }})"></div>
+      {% elif c.card.kind == "icons" %}
+      <div class="thumb thumb-icons">{% for s in c.card.srcs %}<img src="{{ s }}" alt="" loading="lazy">{% endfor %}</div>
+      {% else %}
+      <div class="thumb thumb-none"></div>
+      {% endif %}
+      <span class="card-group">{{ c.group }}</span>
+      <h3>{{ c.title }}</h3>
+      <p>{{ c.summary }}</p>
+    </a>
+    {% endfor %}
+  </div>
+</main>
+{% endblock %}

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--
+		Abilities from abilities/openspec/RoM-inspiration.spec, renamed to fit RimWorld and Beyond Our Reach.
+		defNames keep the spec's names so they are easy to match against it; labels are what players see.
+		Energy costs are the spec's percentages read as points of a 100-point pool (CompAbilityEnergy).
+		A pawn with no energy pool, on itself or its apparel, pays nothing and is limited by cooldowns only.
+		Values are base rank; ranks and upgrades are not implemented. Times are ticks: 60 = 1 s.
+		Not given to any pawn yet: use the debug action "Give all Bamba abilities".
+		Skipped as duplicates: Shield (self) is merged into Shield, which can target self; Heal is covered by Advanced Heal.
+	-->
+
+	<VEF.Abilities.AbilityDef Name="ABT_ArcaneSupportBase" Abstract="True">
+		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+		<showUndrafted>true</showUndrafted>
+		<isPositive>true</isPositive>
+		<modExtensions>
+			<li Class="AllBambaArmors.AbilityExtension_CastingRules" />
+		</modExtensions>
+	</VEF.Abilities.AbilityDef>
+
+	<VEF.Abilities.AbilityDef Name="ABT_ArcaneAttackBase" Abstract="True">
+		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+		<showUndrafted>false</showUndrafted>
+		<isPositive>false</isPositive>
+		<modExtensions>
+			<li Class="AllBambaArmors.AbilityExtension_CastingRules">
+				<violent>true</violent>
+			</li>
+		</modExtensions>
+	</VEF.Abilities.AbilityDef>
+
+	<!-- ================= Melee and mobility ================= -->
+
+	<VEF.Abilities.AbilityDef ParentName="ABT_ArcaneAttackBase">
+		<defName>ABT_ShadowStrike</defName>
+		<label>tacskip</label>
+		<description>Tactical skip: fold space and step out right behind the target, stab it 4 times with a chance of critical hits (lower with heavy weapons, none with guns), and leave a toxic cloud on the enemies there. The skip link then snaps the user straight back to where it started, moving at double attack speed for 5 seconds and hidden by skip distortion for a moment.</description>
+		<iconPath>Icons/Arcane/ShadowStrike</iconPath>
+		<abilityClass>AllBambaArmors.Ability_ShadowStrike</abilityClass>
+		<targetMode>Pawn</targetMode>
+		<targetingParameters>
+			<canTargetBuildings>false</canTargetBuildings>
+		</targetingParameters>
+		<range>35</range>
+		<castTime>96</castTime>
+		<cooldownTime>3600</cooldownTime>
+		<modExtensions>
+			<li Class="AllBambaArmors.AbilityExtension_EnergyCost">
+				<cost>65</cost>
+			</li>
+		</modExtensions>
+	</VEF.Abilities.AbilityDef>
+
+	<!-- ================= Ranged attacks ================= -->
+
+	<VEF.Abilities.AbilityDef ParentName="ABT_ArcaneAttackBase">
+		<defName>ABT_AntiArmor</defName>
+		<label>fire armor-breaker round</label>
+		<description>Chamber a single Kwazaari armor-breaker round and fire it from the equipped gun, using the user's own aim. It hits for the gun's damage (at most 60). Against mechanoids, buildings and heavily armored pawns its penetrator core punches through for double damage, sets off small stunning blasts and shreds up to 4 pieces of worn apparel. Needs a ranged weapon.</description>
+		<iconPath>Icons/Arcane/AntiArmor</iconPath>
+		<abilityClass>AllBambaArmors.Ability_AntiArmor</abilityClass>
+		<targetMode>Pawn</targetMode>
+		<targetingParameters>
+			<canTargetBuildings>true</canTargetBuildings>
+		</targetingParameters>
+		<range>45</range>
+		<castTime>60</castTime>
+		<cooldownTime>600</cooldownTime>
+		<modExtensions>
+			<li Class="AllBambaArmors.AbilityExtension_EnergyCost">
+				<cost>30</cost>
+			</li>
+			<li Class="AllBambaArmors.AbilityExtension_RequiresWeapon">
+				<melee>false</melee>
+			</li>
+			<li Class="VEF.Abilities.AbilityExtension_Projectile">
+				<projectile>ABT_AntiArmorRound</projectile>
+			</li>
+		</modExtensions>
+	</VEF.Abilities.AbilityDef>
+
+	<!-- ================= Area attacks ================= -->
+
+	<VEF.Abilities.AbilityDef ParentName="ABT_ArcaneAttackBase">
+		<defName>ABT_EMP</defName>
+		<label>EMP burst</label>
+		<description>Lob a charged EMP bolt that bursts over a wide area, stunning mechanoids and knocking out shields, turrets and other electrical devices.</description>
+		<iconPath>Icons/Arcane/EMP</iconPath>
+		<abilityClass>VEF.Abilities.Ability_ShootProjectile</abilityClass>
+		<targetMode>Location</targetMode>
+		<targetingParameters>
+			<canTargetLocations>true</canTargetLocations>
+			<canTargetPawns>true</canTargetPawns>
+			<canTargetBuildings>true</canTargetBuildings>
+		</targetingParameters>
+		<range>35</range>
+		<radius>7</radius>
+		<castTime>78</castTime>
+		<cooldownTime>2700</cooldownTime>
+		<modExtensions>
+			<li Class="AllBambaArmors.AbilityExtension_EnergyCost">
+				<cost>20</cost>
+			</li>
+			<li Class="VEF.Abilities.AbilityExtension_Projectile">
+				<projectile>ABT_EMPBolt</projectile>
+				<hitFlags>All</hitFlags>
+			</li>
+		</modExtensions>
+	</VEF.Abilities.AbilityDef>
+
+</Defs>

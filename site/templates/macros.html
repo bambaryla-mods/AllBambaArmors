@@ -1,0 +1,198 @@
+{# Pieces the Markdown helpers render. Every number arrives already read from the defs. #}
+
+{% macro making(it) -%}
+{%- if it.research or it.benches or it.requires %}
+<span class="made">
+  {%- if it.research %}<span title="Research needed">{{ it.research|join(", ") }}</span>{% endif -%}
+  {%- if it.research and it.benches %} · {% endif -%}
+  {%- if it.benches %}<span title="Made at">{{ it.benches|join(", ") }}</span>{% endif -%}
+</span>
+{%- for r in it.requires %}<span class="badge" title="Needs {{ r }}">{{ r }}</span>{% endfor -%}
+{%- endif %}
+{%- endmacro %}
+
+{% macro name_cell(it, extra="") -%}
+<th scope="row" class="name">
+  <div class="name-wrap">
+    {% if it.icon %}<img src="{{ it.icon }}" alt="" loading="lazy" width="40" height="40">{% else %}<span class="noicon" aria-hidden="true"></span>{% endif %}
+    <div>
+      <span class="label"{% if not it.spoiler_desc %} title="{{ it.description|desc_plain }}"{% endif %}>{{ it.label }}</span>
+      {{ making(it) }}
+      {{ extra }}
+    </div>
+  </div>
+</th>
+{%- endmacro %}
+
+{% macro tier_head(g, what) -%}
+<h3 class="tier-head tier-{{ g.tier }}" id="{{ what|slug }}-{{ g.tier }}">{{ g.label }}</h3>
+{%- endmacro %}
+
+{% macro spoiler_open(g, what) -%}
+{% if g.spoiler %}<details class="spoiler tier-{{ g.tier }}"><summary><span class="tier-name">{{ g.label }}</span> {{ what }}<span class="muted">, late-game spoiler. Click to show.</span></summary>{% endif %}
+{%- endmacro %}
+
+{% macro spoiler_close(g) -%}
+{% if g.spoiler %}</details>{% endif %}
+{%- endmacro %}
+
+{# ---------- armor and apparel ---------- #}
+
+{% macro apparel_tables(groups, kind="apparel") %}
+{% for g in groups %}
+{{ tier_head(g, kind) }}
+{{ spoiler_open(g, "gear") }}
+{% set vrows = g.items|selectattr("vanilla")|list %}
+<div class="vanilla-only"><p class="mode-label">Vanilla</p>
+  {% if vrows %}
+  <div class="table-scroll"><table class="stats">
+    <thead><tr><th scope="col">Item</th><th scope="col" title="Sharp armor">Sharp</th><th scope="col" title="Blunt armor">Blunt</th><th scope="col" title="Heat armor">Heat</th><th scope="col" title="Cold / heat insulation">Insulation</th><th scope="col">Covers</th><th scope="col">Effects</th><th scope="col">Mass</th></tr></thead>
+    <tbody>
+    {% for it in vrows %}{% set v = it.vanilla %}
+      <tr>{{ name_cell(it) }}<td>{{ v.sharp|armor }}</td><td>{{ v.blunt|armor }}</td><td>{{ v.heat|armor }}</td>
+      <td>{% if v.cold or v.hot %}{{ v.cold|num }} / {{ v.hot|num }} °C{% else %}—{% endif %}</td>
+      <td class="wrap">{{ v.covers|join(", ") or "—" }}</td>
+      <td class="wrap">{{ v.effects|join("<br>"|safe) or "—" }}</td>
+      <td>{{ v.mass|num }} kg</td></tr>
+    {% endfor %}
+    </tbody>
+  </table></div>
+  {% endif %}
+  {% set ce_only = g.items|rejectattr("vanilla")|map(attribute="label")|list %}
+  {% if ce_only %}<p class="note">Only with Combat Extended: {{ ce_only|join(", ") }}.</p>{% endif %}
+</div>
+<div class="ce-only"><p class="mode-label">Combat Extended</p><div class="table-scroll"><table class="stats">
+  <thead><tr><th scope="col">Item</th><th scope="col" title="Sharp armor, mm RHA">Sharp</th><th scope="col" title="Blunt armor, MPa">Blunt</th><th scope="col" title="Heat armor">Heat</th><th scope="col">Bulk</th><th scope="col" title="Bulk while worn">Worn bulk</th><th scope="col">Covers</th><th scope="col">Effects</th><th scope="col">Mass</th></tr></thead>
+  <tbody>
+  {% for it in g.items|selectattr("ce") %}{% set c = it.ce %}
+    <tr>{{ name_cell(it) }}<td>{{ c.sharp|armor_ce("mm") }}</td><td>{{ c.blunt|armor_ce("MPa") }}</td><td>{{ c.heat|armor }}</td>
+    <td>{{ c.bulk|num }}</td><td>{{ c.worn_bulk|num }}</td>
+    <td class="wrap">{{ c.covers|join(", ") or "—" }}{% if c.partial %}<span class="note">Partial: {{ c.partial|join("; ") }}</span>{% endif %}</td>
+    <td class="wrap">{{ c.effects|join("<br>"|safe) or "—" }}</td>
+    <td>{{ c.mass|num }} kg</td></tr>
+  {% endfor %}
+  </tbody>
+</table></div></div>
+{{ spoiler_close(g) }}
+{% endfor %}
+{% endmacro %}
+
+{% macro card(it, costs=False) -%}
+<li class="gcard">
+  {% if it.icon %}<img src="{{ it.icon }}" alt="" loading="lazy" width="56" height="56">{% else %}<span class="noicon" aria-hidden="true"></span>{% endif %}
+  <div>
+    <h4>{{ it.label }}</h4>
+    {{ making(it) }}
+    {% if costs and it.cost %}<span class="made cost">Costs {{ it.cost|join(", ") }}</span>{% endif %}
+    {% if it.description and it.spoiler_desc %}<details class="desc-spoiler"><summary>Description (spoiler)</summary><p>{{ it.description|desc }}</p></details>{% elif it.description %}<p>{{ it.description|desc }}</p>{% endif %}
+  </div>
+</li>
+{%- endmacro %}
+
+{# ---------- galleries ---------- #}
+
+{% macro gallery(groups, costs=False) %}
+{% for g in groups %}
+{{ tier_head(g, "gallery") }}
+{{ spoiler_open(g, "items") }}
+<ul class="gallery">
+  {% for it in g.items %}
+  {{ card(it, costs) }}
+  {% endfor %}
+</ul>
+{{ spoiler_close(g) }}
+{% endfor %}
+{% endmacro %}
+
+{% macro things(items, costs=False) %}
+<ul class="gallery gallery-inline">
+  {% for it in items %}
+  {{ card(it, costs) }}
+  {% endfor %}
+</ul>
+{% endmacro %}
+
+{# ---------- research ---------- #}
+
+{% macro research_tables(groups) %}
+{% for g in groups %}
+{{ tier_head(g, "research") }}
+{{ spoiler_open(g, "research") }}
+<div class="table-scroll"><table class="stats research">
+  <thead><tr><th scope="col">Project</th><th scope="col">Cost</th><th scope="col">Needs</th></tr></thead>
+  <tbody>
+  {% for r in g.items %}
+    <tr>
+      <th scope="row" class="name"><span class="label">{{ r.label }}</span>{% for q in r.requires %}<span class="badge">{{ q }}</span>{% endfor %}{% if r.description %}<span class="rdesc">{{ r.description|desc }}</span>{% endif %}</th>
+      <td>{% if r.special %}<span class="special">{{ r.special }}</span>{% else %}{{ r.cost|num(0) }}{% endif %}</td>
+      <td class="wrap">{{ r.prerequisites|join(", ") or "—" }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table></div>
+{{ spoiler_close(g) }}
+{% endfor %}
+{% endmacro %}
+
+{# ---------- small pieces ---------- #}
+
+{% macro banner(src, caption, alt) %}
+<figure class="banner"><img src="{{ src }}" alt="{{ alt }}" loading="lazy">{% if caption %}<figcaption>{{ caption }}</figcaption>{% endif %}</figure>
+{% endmacro %}
+
+{% macro screenshot(src, caption) %}
+<figure class="shot"><a href="{{ src }}"><img src="{{ src }}" alt="{{ caption or '' }}" loading="lazy"></a>{% if caption %}<figcaption>{{ caption }}</figcaption>{% endif %}</figure>
+{% endmacro %}
+
+{% macro requirements(deps) %}
+<ul class="deps">
+  {% for d in deps %}<li>{% if d.url %}<a href="{{ d.url }}">{{ d.name }}</a>{% else %}{{ d.name }}{% endif %}</li>{% endfor %}
+</ul>
+{% endmacro %}
+
+{% macro integration_list(mods) %}
+<ul class="modlist">
+  {% for m in mods %}<li>{{ m.name }}</li>{% endfor %}
+</ul>
+{% endmacro %}
+
+{% macro abilities(items) %}
+<ul class="gallery gallery-inline">
+  {% for a in items %}
+  <li class="gcard">
+    {% if a.icon %}<img src="{{ a.icon }}" alt="" loading="lazy" width="56" height="56">{% else %}<span class="noicon" aria-hidden="true"></span>{% endif %}
+    <div>
+      <h4>{{ a.label }}</h4>
+      <span class="made">
+        {%- if a.cooldown %}{{ a.cooldown[0]|num(1) }}{% if a.cooldown[1] != a.cooldown[0] %}–{{ a.cooldown[1]|num(1) }}{% endif %} s cooldown{% if a.shared %}, shared{% endif %}{% else %}No cooldown{% endif -%}
+        {%- if a.granted_by %} · On {{ a.granted_by|join(", ") }}{% endif -%}
+      </span>
+      {% if a.description %}<p>{{ a.description|desc }}</p>{% endif %}
+    </div>
+  </li>
+  {% endfor %}
+</ul>
+{% endmacro %}
+
+{% macro quote(text) %}
+<blockquote class="game-text">{{ text|desc }}</blockquote>
+{% endmacro %}
+
+{# ---------- armor abilities ---------- #}
+
+{% macro armor_abilities(rows) %}
+<div class="table-scroll"><table class="stats abilities-table">
+  <thead><tr><th scope="col">Ability</th><th scope="col">What it does</th><th scope="col" title="Taken from the armor's energy pool">Energy</th><th scope="col">Cooldown</th><th scope="col">Worn with</th></tr></thead>
+  <tbody>
+  {% for a in rows %}
+    <tr>
+      <th scope="row" class="name"><span class="ability-name">{% if a.icon %}<img src="{{ a.icon }}" alt="" loading="lazy" width="32" height="32">{% endif %}{{ a.label }}</span></th>
+      <td class="wrap">{{ a.description|desc }}</td>
+      <td>{{ a.cost|num(0) }}</td>
+      <td>{{ a.cooldown|duration }}</td>
+      <td class="wrap">{{ a.armors|join(", ") }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table></div>
+{% endmacro %}

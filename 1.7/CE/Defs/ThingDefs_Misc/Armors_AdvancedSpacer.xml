@@ -1,0 +1,926 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- ==================== Advanced Recon Armor ==================== -->
+
+	<ThingDef ParentName="ArmorMachineableBase">
+		<defName>ABT_Apparel_AS_ReconHelmet</defName>
+		<label>flanker helmet</label>
+		<description>Light and agile powered helmet designed as combat replacement of the recon armors. In terms of protection, it's a marine armor with reduced weight and increased.</description>
+		<techLevel>Spacer</techLevel>
+		<tickerType>Normal</tickerType>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<researchPrerequisites>
+				<li>ABT_Research_AS_ReconArmor</li>
+			</researchPrerequisites>
+			<skillRequirements>
+				<Crafting>10</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<graphicData>
+			<texPath>SpacerRecon/spacer_recon_Helmet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<uiIconScale>1.3</uiIconScale>
+		<statBases>
+			<WorkToMake>20000</WorkToMake>
+			<MaxHitPoints>250</MaxHitPoints>
+			<Mass>2</Mass>
+			<Bulk>4</Bulk>
+			<WornBulk>1</WornBulk>
+			<NightVisionEfficiency_Apparel>0.8</NightVisionEfficiency_Apparel>
+			<Flammability>0</Flammability>
+			<ArmorRating_Sharp>15</ArmorRating_Sharp>
+			<ArmorRating_Blunt>35</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.55</ArmorRating_Heat>
+			<Insulation_Cold>10</Insulation_Cold>
+			<Insulation_Heat>5</Insulation_Heat>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<AimingAccuracy>0.25</AimingAccuracy>
+			<ToxicEnvironmentResistance>0.50</ToxicEnvironmentResistance>
+			<SmokeSensitivity>-1</SmokeSensitivity>
+			<HypoxiaResistance MayRequire="kentington.saveourship2">0.5</HypoxiaResistance>
+			<DecompressionResistance MayRequire="kentington.saveourship2">0.5</DecompressionResistance>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.6</VacuumResistance>
+		</equippedStatOffsets>
+		<thingCategories>
+			<li>ApparelArmor</li>
+		</thingCategories>
+		<tradeTags>
+			<li>HiTechArmor</li>
+		</tradeTags>
+		<costList>
+			<ComponentSpacer>3</ComponentSpacer>
+			<Steel>30</Steel>
+			<Plasteel>30</Plasteel>
+			<Hyperweave>10</Hyperweave>
+		</costList>
+		<apparel>
+			<immuneToToxGasExposure>true</immuneToToxGasExposure>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<wornGraphicPath>SpacerRecon/spacer_recon_Helmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<tags>
+				<li></li>
+			</tags>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+			<soundWear>Wear_PowerArmor</soundWear>
+			<soundRemove>Remove_PowerArmor</soundRemove>
+		</apparel>
+		<thingSetMakerTags>
+			<li>RewardStandardLowFreq</li>
+		</thingSetMakerTags>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(0.9,0.9,0.9)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.33,0.33,0.33)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.65,0.65,0.65)</only>
+				</li>
+				<li>
+					<weight>6</weight>
+					<min>(0.3,0.3,0.3)</min>
+					<max>(0.5,0.5,0.5)</max>
+				</li>
+			</options>
+		</colorGenerator>
+		<comps>
+			<li Class="CompProperties_Biocodable" />
+			<li MayRequire="kentington.saveourship2">
+				<compClass>SaveOurShip2.CompEVA</compClass>
+			</li>
+		</comps>
+		<allowedArchonexusCount>1</allowedArchonexusCount>
+	</ThingDef>
+
+	<ThingDef ParentName="ArmorMachineableBase">
+		<defName>ABT_Apparel_AS_ReconArmor</defName>
+		<label>flanker armor</label>
+		<description>Light and agile powered suit of armor designed as combat replacement of the recon armors. In terms of protection, it's a marine armor with reduced weight and increased.</description>
+		<techLevel>Spacer</techLevel>
+		<tickerType>Normal</tickerType>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<researchPrerequisites>
+				<li>ABT_Research_AS_ReconArmor</li>
+			</researchPrerequisites>
+			<skillRequirements>
+				<Crafting>10</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<graphicData>
+			<texPath>SpacerRecon/spacer_recon</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<uiIconScale>1.3</uiIconScale>
+		<statBases>
+			<WorkToMake>65000</WorkToMake>
+			<MaxHitPoints>450</MaxHitPoints>
+			<Mass>25</Mass>
+			<Bulk>80</Bulk>
+			<WornBulk>10</WornBulk>
+			<Flammability>0</Flammability>
+			<ArmorRating_Sharp>20</ArmorRating_Sharp>
+			<ArmorRating_Blunt>45</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.55</ArmorRating_Heat>
+			<Insulation_Cold>75</Insulation_Cold>
+			<Insulation_Heat>15</Insulation_Heat>
+			<EquipDelay>8</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MeleeHitChance>0.25</MeleeHitChance>
+			<CarryWeight>60</CarryWeight>
+			<CarryBulk>10</CarryBulk>
+			<ToxicEnvironmentResistance>0.50</ToxicEnvironmentResistance>
+			<MoveSpeed>0.6</MoveSpeed>
+			<HypoxiaResistance MayRequire="kentington.saveourship2">0.5</HypoxiaResistance>
+			<DecompressionResistance MayRequire="kentington.saveourship2">0.5</DecompressionResistance>
+			<VacuumSpeedMultiplier MayRequire="kentington.saveourship2">1.5</VacuumSpeedMultiplier>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.5</VacuumResistance>
+		</equippedStatOffsets>
+		<thingCategories>
+			<li>ApparelArmor</li>
+		</thingCategories>
+		<tradeTags>
+			<li>HiTechArmor</li>
+		</tradeTags>
+		<costList>
+			<ComponentSpacer>6</ComponentSpacer>
+			<Steel>60</Steel>
+			<Plasteel>60</Plasteel>
+			<Uranium>35</Uranium>
+			<Hyperweave>15</Hyperweave>
+		</costList>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Neck</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Waist</li>
+				<li>Legs</li>
+				<li>Hands</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<wornGraphicPath>SpacerRecon/spacer_recon</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li></li>
+			</tags>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+			<soundWear>Wear_PowerArmor</soundWear>
+			<soundRemove>Remove_PowerArmor</soundRemove>
+		</apparel>
+		<thingSetMakerTags>
+			<li>RewardStandardLowFreq</li>
+		</thingSetMakerTags>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(0.9,0.9,0.9)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.33,0.33,0.33)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.65,0.65,0.65)</only>
+				</li>
+				<li>
+					<weight>6</weight>
+					<min>(0.3,0.3,0.3)</min>
+					<max>(0.5,0.5,0.5)</max>
+				</li>
+			</options>
+		</colorGenerator>
+		<comps>
+			<li Class="CompProperties_Biocodable" />
+			<li MayRequire="kentington.saveourship2">
+				<compClass>SaveOurShip2.CompEVA</compClass>
+			</li>
+		</comps>
+		<allowedArchonexusCount>1</allowedArchonexusCount>
+	</ThingDef>
+
+	<!-- ==================== Advanced Marine Armor ==================== -->
+
+	<ThingDef ParentName="ArmorMachineableBase">
+		<defName>ABT_Apparel_AS_MarineHelmet</defName>
+		<label>vanguard helmet</label>
+		<description>The mainstay of modern militaries outside of the rim. Offering a cataphract-level of protection without the induced mobility cost, Vanguard marines laugh in the face of danger.</description>
+		<techLevel>Spacer</techLevel>
+		<tickerType>Normal</tickerType>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<researchPrerequisites>
+				<li>ABT_Research_AS_MarineArmor</li>
+			</researchPrerequisites>
+			<skillRequirements>
+				<Crafting>10</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<graphicData>
+			<texPath>SpacerMarine/spacer_marine_Helmet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<uiIconScale>1.3</uiIconScale>
+		<statBases>
+			<WorkToMake>30000</WorkToMake>
+			<MaxHitPoints>300</MaxHitPoints>
+			<Mass>3</Mass>
+			<Bulk>5</Bulk>
+			<WornBulk>1</WornBulk>
+			<NightVisionEfficiency_Apparel>0.6</NightVisionEfficiency_Apparel>
+			<Flammability>0</Flammability>
+			<ArmorRating_Sharp>20</ArmorRating_Sharp>
+			<ArmorRating_Blunt>45</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.65</ArmorRating_Heat>
+			<Insulation_Cold>10</Insulation_Cold>
+			<Insulation_Heat>5</Insulation_Heat>
+			<EquipDelay>3</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<AimingAccuracy>0.15</AimingAccuracy>
+			<ToxicEnvironmentResistance>0.50</ToxicEnvironmentResistance>
+			<SmokeSensitivity>-1</SmokeSensitivity>
+			<HypoxiaResistance MayRequire="kentington.saveourship2">0.5</HypoxiaResistance>
+			<DecompressionResistance MayRequire="kentington.saveourship2">0.5</DecompressionResistance>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.6</VacuumResistance>
+		</equippedStatOffsets>
+		<thingCategories>
+			<li>ApparelArmor</li>
+		</thingCategories>
+		<tradeTags>
+			<li>HiTechArmor</li>
+		</tradeTags>
+		<costList>
+			<ComponentSpacer>3</ComponentSpacer>
+			<Steel>40</Steel>
+			<Plasteel>40</Plasteel>
+			<Hyperweave>10</Hyperweave>
+		</costList>
+		<apparel>
+			<immuneToToxGasExposure>true</immuneToToxGasExposure>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<wornGraphicPath>SpacerMarine/spacer_marine_Helmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<tags>
+				<li></li>
+			</tags>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+			<soundWear>Wear_PowerArmor</soundWear>
+			<soundRemove>Remove_PowerArmor</soundRemove>
+		</apparel>
+		<thingSetMakerTags>
+			<li>RewardStandardLowFreq</li>
+		</thingSetMakerTags>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(0.9,0.9,0.9)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.33,0.33,0.33)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.65,0.65,0.65)</only>
+				</li>
+				<li>
+					<weight>6</weight>
+					<min>(0.3,0.3,0.3)</min>
+					<max>(0.5,0.5,0.5)</max>
+				</li>
+			</options>
+		</colorGenerator>
+		<comps>
+			<li Class="CompProperties_Biocodable" />
+			<li MayRequire="kentington.saveourship2">
+				<compClass>SaveOurShip2.CompEVA</compClass>
+			</li>
+		</comps>
+		<allowedArchonexusCount>1</allowedArchonexusCount>
+	</ThingDef>
+
+	<ThingDef ParentName="ArmorMachineableBase">
+		<defName>ABT_Apparel_AS_MarineArmor</defName>
+		<label>vanguard armor</label>
+		<description>The mainstay of modern militaries outside of the rim. Offering a cataphract-level of protection without the induced mobility cost, Vanguard marines laugh in the face of danger.</description>
+		<techLevel>Spacer</techLevel>
+		<tickerType>Normal</tickerType>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<researchPrerequisites>
+				<li>ABT_Research_AS_MarineArmor</li>
+			</researchPrerequisites>
+			<skillRequirements>
+				<Crafting>10</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<graphicData>
+			<texPath>SpacerMarine/spacer_marine</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<uiIconScale>1.3</uiIconScale>
+		<statBases>
+			<WorkToMake>80000</WorkToMake>
+			<MaxHitPoints>600</MaxHitPoints>
+			<Mass>40</Mass>
+			<Bulk>100</Bulk>
+			<WornBulk>12</WornBulk>
+			<Flammability>0</Flammability>
+			<ArmorRating_Sharp>25</ArmorRating_Sharp>
+			<ArmorRating_Blunt>56</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.65</ArmorRating_Heat>
+			<Insulation_Cold>75</Insulation_Cold>
+			<Insulation_Heat>15</Insulation_Heat>
+			<EquipDelay>10</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<CarryWeight>90</CarryWeight>
+			<CarryBulk>15</CarryBulk>
+			<ShootingAccuracyPawn>0.25</ShootingAccuracyPawn>
+			<ToxicEnvironmentResistance>0.50</ToxicEnvironmentResistance>
+			<MoveSpeed>0.25</MoveSpeed>
+			<HypoxiaResistance MayRequire="kentington.saveourship2">0.5</HypoxiaResistance>
+			<DecompressionResistance MayRequire="kentington.saveourship2">0.5</DecompressionResistance>
+			<VacuumSpeedMultiplier MayRequire="kentington.saveourship2">1.5</VacuumSpeedMultiplier>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.5</VacuumResistance>
+		</equippedStatOffsets>
+		<thingCategories>
+			<li>ApparelArmor</li>
+		</thingCategories>
+		<tradeTags>
+			<li>HiTechArmor</li>
+		</tradeTags>
+		<costList>
+			<ComponentSpacer>8</ComponentSpacer>
+			<Steel>75</Steel>
+			<Plasteel>75</Plasteel>
+			<Uranium>50</Uranium>
+			<Hyperweave>20</Hyperweave>
+		</costList>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Neck</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Waist</li>
+				<li>Legs</li>
+				<li>Hands</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<wornGraphicPath>SpacerMarine/spacer_marine</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li></li>
+			</tags>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+			<soundWear>Wear_PowerArmor</soundWear>
+			<soundRemove>Remove_PowerArmor</soundRemove>
+		</apparel>
+		<thingSetMakerTags>
+			<li>RewardStandardLowFreq</li>
+		</thingSetMakerTags>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(0.9,0.9,0.9)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.33,0.33,0.33)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.65,0.65,0.65)</only>
+				</li>
+				<li>
+					<weight>6</weight>
+					<min>(0.3,0.3,0.3)</min>
+					<max>(0.5,0.5,0.5)</max>
+				</li>
+			</options>
+		</colorGenerator>
+		<comps>
+			<li Class="CompProperties_Biocodable" />
+			<li MayRequire="kentington.saveourship2">
+				<compClass>SaveOurShip2.CompEVA</compClass>
+			</li>
+		</comps>
+		<allowedArchonexusCount>1</allowedArchonexusCount>
+	</ThingDef>
+
+	<!-- ==================== Advanced Cataphract Armor ==================== -->
+
+	<ThingDef ParentName="ArmorMachineableBase">
+		<defName>ABT_Apparel_AS_CataphractHelmet</defName>
+		<label>breacher helmet</label>
+		<description>Space marine-issued armor for combat deployments in the firey hell of space combat zones, Breacher armors are used to get through PD cannon fire onto an enemy ship. They are heavy and hardly-penetrable.</description>
+		<techLevel>Spacer</techLevel>
+		<tickerType>Normal</tickerType>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<researchPrerequisites>
+				<li>ABT_Research_AS_CataphractArmor</li>
+			</researchPrerequisites>
+			<skillRequirements>
+				<Crafting>11</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<graphicData>
+			<texPath>SpacerCataphract/spacer_cataphract_Helmet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<uiIconScale>1.3</uiIconScale>
+		<statBases>
+			<WorkToMake>40000</WorkToMake>
+			<MaxHitPoints>350</MaxHitPoints>
+			<Mass>5</Mass>
+			<Bulk>6</Bulk>
+			<WornBulk>1</WornBulk>
+			<NightVisionEfficiency_Apparel>0.75</NightVisionEfficiency_Apparel>
+			<Flammability>0</Flammability>
+			<ArmorRating_Sharp>27</ArmorRating_Sharp>
+			<ArmorRating_Blunt>60</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.75</ArmorRating_Heat>
+			<Insulation_Cold>10</Insulation_Cold>
+			<Insulation_Heat>5</Insulation_Heat>
+			<EquipDelay>5</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<AimingAccuracy>0.15</AimingAccuracy>
+			<ToxicEnvironmentResistance>0.50</ToxicEnvironmentResistance>
+			<SmokeSensitivity>-1</SmokeSensitivity>
+			<HypoxiaResistance MayRequire="kentington.saveourship2">0.5</HypoxiaResistance>
+			<DecompressionResistance MayRequire="kentington.saveourship2">0.5</DecompressionResistance>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.6</VacuumResistance>
+		</equippedStatOffsets>
+		<thingCategories>
+			<li>ApparelArmor</li>
+		</thingCategories>
+		<tradeTags>
+			<li>HiTechArmor</li>
+		</tradeTags>
+		<costList>
+			<ComponentSpacer>3</ComponentSpacer>
+			<Steel>60</Steel>
+			<Plasteel>60</Plasteel>
+			<Hyperweave>15</Hyperweave>
+		</costList>
+		<apparel>
+			<immuneToToxGasExposure>true</immuneToToxGasExposure>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<wornGraphicPath>SpacerCataphract/spacer_cataphract_Helmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<tags>
+				<li></li>
+			</tags>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+			<soundWear>Wear_PowerArmor</soundWear>
+			<soundRemove>Remove_PowerArmor</soundRemove>
+		</apparel>
+		<thingSetMakerTags>
+			<li>RewardStandardLowFreq</li>
+		</thingSetMakerTags>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(0.9,0.9,0.9)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.33,0.33,0.33)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.65,0.65,0.65)</only>
+				</li>
+				<li>
+					<weight>6</weight>
+					<min>(0.3,0.3,0.3)</min>
+					<max>(0.5,0.5,0.5)</max>
+				</li>
+			</options>
+		</colorGenerator>
+		<comps>
+			<li Class="CompProperties_Biocodable" />
+			<li MayRequire="kentington.saveourship2">
+				<compClass>SaveOurShip2.CompEVA</compClass>
+			</li>
+		</comps>
+		<allowedArchonexusCount>1</allowedArchonexusCount>
+	</ThingDef>
+
+	<ThingDef ParentName="ArmorMachineableBase">
+		<defName>ABT_Apparel_AS_CataphractArmor</defName>
+		<label>breacher armor</label>
+		<description>Space marine special used in combat deployments in the firey hell of space combat zones, Breacher armors are used to get through PD cannon fire onto an enemy ship. They are heavy and hardly-penetrable.</description>
+		<techLevel>Spacer</techLevel>
+		<tickerType>Normal</tickerType>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<researchPrerequisites>
+				<li>ABT_Research_AS_CataphractArmor</li>
+			</researchPrerequisites>
+			<skillRequirements>
+				<Crafting>11</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<graphicData>
+			<texPath>SpacerCataphract/spacer_cataphract</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<uiIconScale>1.3</uiIconScale>
+		<statBases>
+			<WorkToMake>95000</WorkToMake>
+			<MaxHitPoints>500</MaxHitPoints>
+			<Mass>65</Mass>
+			<Bulk>100</Bulk>
+			<WornBulk>13</WornBulk>
+			<Flammability>0</Flammability>
+			<ArmorRating_Sharp>34</ArmorRating_Sharp>
+			<ArmorRating_Blunt>76</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.75</ArmorRating_Heat>
+			<Insulation_Cold>75</Insulation_Cold>
+			<Insulation_Heat>15</Insulation_Heat>
+			<EquipDelay>14</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<CarryWeight>120</CarryWeight>
+			<CarryBulk>30</CarryBulk>
+			<ShootingAccuracyPawn>0.3</ShootingAccuracyPawn>
+			<ToxicEnvironmentResistance>0.50</ToxicEnvironmentResistance>
+			<MoveSpeed>0.25</MoveSpeed>
+			<HypoxiaResistance MayRequire="kentington.saveourship2">0.5</HypoxiaResistance>
+			<DecompressionResistance MayRequire="kentington.saveourship2">0.5</DecompressionResistance>
+			<VacuumSpeedMultiplier MayRequire="kentington.saveourship2">1.5</VacuumSpeedMultiplier>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.5</VacuumResistance>
+		</equippedStatOffsets>
+		<thingCategories>
+			<li>ApparelArmor</li>
+		</thingCategories>
+		<tradeTags>
+			<li>HiTechArmor</li>
+		</tradeTags>
+		<costList>
+			<ComponentSpacer>12</ComponentSpacer>
+			<Steel>112</Steel>
+			<Plasteel>113</Plasteel>
+			<Uranium>75</Uranium>
+			<Hyperweave>40</Hyperweave>
+		</costList>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Neck</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Waist</li>
+				<li>Legs</li>
+				<li>Hands</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<wornGraphicPath>SpacerCataphract/spacer_cataphract</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li></li>
+			</tags>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+			<soundWear>Wear_PowerArmor</soundWear>
+			<soundRemove>Remove_PowerArmor</soundRemove>
+		</apparel>
+		<thingSetMakerTags>
+			<li>RewardStandardLowFreq</li>
+		</thingSetMakerTags>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(0.9,0.9,0.9)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.33,0.33,0.33)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.65,0.65,0.65)</only>
+				</li>
+				<li>
+					<weight>6</weight>
+					<min>(0.3,0.3,0.3)</min>
+					<max>(0.5,0.5,0.5)</max>
+				</li>
+			</options>
+		</colorGenerator>
+		<comps>
+			<li Class="CompProperties_Biocodable" />
+			<li MayRequire="kentington.saveourship2">
+				<compClass>SaveOurShip2.CompEVA</compClass>
+			</li>
+		</comps>
+		<allowedArchonexusCount>1</allowedArchonexusCount>
+	</ThingDef>
+
+	<!-- ==================== Prestige Advanced Spacer Marine Armor ==================== -->
+
+	<ThingDef ParentName="ArmorMachineableBase" MayRequire="ludeon.rimworld.royalty">
+		<defName>ABT_Apparel_AS_PrestigeMarineHelmet</defName>
+		<label>prestige vanguard helmet</label>
+		<description>A prestige, noble version of the original Vanguard helmet, that trades protection for flair. The mainstay of modern militaries outside of the rim. Offering a cataphract-level of protection without the induced mobility cost, Vanguard marines laugh in the face of danger.</description>
+		<techLevel>Spacer</techLevel>
+		<tickerType>Normal</tickerType>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<researchPrerequisites>
+				<li>ABT_Research_AS_MarineArmor</li>
+			</researchPrerequisites>
+			<skillRequirements>
+				<Crafting>10</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<graphicData>
+			<texPath>PrestigeSpacerMarine/Prestige_Spacer_Marine_Helmet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<uiIconScale>1.3</uiIconScale>
+		<statBases>
+			<WorkToMake>25000</WorkToMake>
+			<MaxHitPoints>275</MaxHitPoints>
+			<Mass>2.5</Mass>
+			<Bulk>4.5</Bulk>
+			<WornBulk>1</WornBulk>
+			<NightVisionEfficiency_Apparel>0.7</NightVisionEfficiency_Apparel>
+			<Flammability>0</Flammability>
+			<ArmorRating_Sharp>17.5</ArmorRating_Sharp>
+			<ArmorRating_Blunt>40</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.6</ArmorRating_Heat>
+			<Insulation_Cold>10</Insulation_Cold>
+			<Insulation_Heat>5</Insulation_Heat>
+			<EquipDelay>2.5</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<AimingAccuracy>0.2</AimingAccuracy>
+			<ToxicEnvironmentResistance>0.50</ToxicEnvironmentResistance>
+			<SmokeSensitivity>-1</SmokeSensitivity>
+			<HypoxiaResistance MayRequire="kentington.saveourship2">0.5</HypoxiaResistance>
+			<DecompressionResistance MayRequire="kentington.saveourship2">0.5</DecompressionResistance>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.6</VacuumResistance>
+		</equippedStatOffsets>
+		<thingCategories>
+			<li>ApparelArmor</li>
+		</thingCategories>
+		<tradeTags>
+			<li>HiTechArmor</li>
+		</tradeTags>
+		<costList>
+			<ComponentSpacer>3</ComponentSpacer>
+			<Steel>35</Steel>
+			<Plasteel>35</Plasteel>
+			<Hyperweave>10</Hyperweave>
+		</costList>
+		<apparel>
+			<immuneToToxGasExposure>true</immuneToToxGasExposure>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<wornGraphicPath>PrestigeSpacerMarine/Prestige_Spacer_Marine_Helmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<tags>
+				<li>Royal</li>
+				<li>RoyalTier5</li>
+			</tags>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+			<soundWear>Wear_PowerArmor</soundWear>
+			<soundRemove>Remove_PowerArmor</soundRemove>
+		</apparel>
+		<thingSetMakerTags>
+			<li>RewardStandardLowFreq</li>
+		</thingSetMakerTags>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(0.9,0.9,0.9)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.33,0.33,0.33)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.65,0.65,0.65)</only>
+				</li>
+				<li>
+					<weight>6</weight>
+					<min>(0.3,0.3,0.3)</min>
+					<max>(0.5,0.5,0.5)</max>
+				</li>
+			</options>
+		</colorGenerator>
+		<comps>
+			<li Class="CompProperties_Biocodable" />
+			<li MayRequire="kentington.saveourship2">
+				<compClass>SaveOurShip2.CompEVA</compClass>
+			</li>
+		</comps>
+		<allowedArchonexusCount>1</allowedArchonexusCount>
+	</ThingDef>
+
+	<ThingDef ParentName="ArmorMachineableBase" MayRequire="ludeon.rimworld.royalty">
+		<defName>ABT_Apparel_AS_PrestigeMarineArmor</defName>
+		<label>prestige vanguard armor</label>
+		<description>A prestige, noble version of the original Vanguard armor, that trades protection for flair. The mainstay of modern militaries outside of the rim. Offering a cataphract-level of protection without the induced mobility cost, Vanguard marines laugh in the face of danger.</description>
+		<techLevel>Spacer</techLevel>
+		<tickerType>Normal</tickerType>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<researchPrerequisites>
+				<li>ABT_Research_AS_MarineArmor</li>
+			</researchPrerequisites>
+			<skillRequirements>
+				<Crafting>10</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<graphicData>
+			<texPath>PrestigeSpacerMarine/Prestige_Spacer_Marine</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<uiIconScale>1.3</uiIconScale>
+		<statBases>
+			<WorkToMake>72500</WorkToMake>
+			<MaxHitPoints>525</MaxHitPoints>
+			<Mass>32.5</Mass>
+			<Bulk>90</Bulk>
+			<WornBulk>11</WornBulk>
+			<Flammability>0</Flammability>
+			<ArmorRating_Sharp>22.5</ArmorRating_Sharp>
+			<ArmorRating_Blunt>50.5</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.6</ArmorRating_Heat>
+			<Insulation_Cold>75</Insulation_Cold>
+			<Insulation_Heat>15</Insulation_Heat>
+			<EquipDelay>9</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<CarryWeight>75</CarryWeight>
+			<CarryBulk>12.5</CarryBulk>
+			<ShootingAccuracyPawn>0.15</ShootingAccuracyPawn>
+			<ToxicEnvironmentResistance>0.50</ToxicEnvironmentResistance>
+			<MoveSpeed>0.42</MoveSpeed>
+			<HypoxiaResistance MayRequire="kentington.saveourship2">0.5</HypoxiaResistance>
+			<DecompressionResistance MayRequire="kentington.saveourship2">0.5</DecompressionResistance>
+			<VacuumSpeedMultiplier MayRequire="kentington.saveourship2">1.5</VacuumSpeedMultiplier>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.5</VacuumResistance>
+		</equippedStatOffsets>
+		<thingCategories>
+			<li>ApparelArmor</li>
+		</thingCategories>
+		<tradeTags>
+			<li>HiTechArmor</li>
+		</tradeTags>
+		<costList>
+			<ComponentSpacer>7</ComponentSpacer>
+			<Steel>68</Steel>
+			<Plasteel>67</Plasteel>
+			<Uranium>42</Uranium>
+			<Hyperweave>17</Hyperweave>
+		</costList>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Neck</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Waist</li>
+				<li>Legs</li>
+				<li>Hands</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<wornGraphicPath>PrestigeSpacerMarine/Prestige_Spacer_Marine</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li>Royal</li>
+				<li>RoyalTier5</li>
+			</tags>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+			<soundWear>Wear_PowerArmor</soundWear>
+			<soundRemove>Remove_PowerArmor</soundRemove>
+		</apparel>
+		<thingSetMakerTags>
+			<li>RewardStandardLowFreq</li>
+		</thingSetMakerTags>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(0.9,0.9,0.9)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.33,0.33,0.33)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.65,0.65,0.65)</only>
+				</li>
+				<li>
+					<weight>6</weight>
+					<min>(0.3,0.3,0.3)</min>
+					<max>(0.5,0.5,0.5)</max>
+				</li>
+			</options>
+		</colorGenerator>
+		<comps>
+			<li Class="CompProperties_Biocodable" />
+			<li MayRequire="kentington.saveourship2">
+				<compClass>SaveOurShip2.CompEVA</compClass>
+			</li>
+		</comps>
+		<allowedArchonexusCount>1</allowedArchonexusCount>
+	</ThingDef>
+
+</Defs>

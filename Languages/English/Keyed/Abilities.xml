@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+	<ABT_WarpInvalidDestination>Cannot warp there.</ABT_WarpInvalidDestination>
+
+	<!-- Casting rules -->
+	<ABT_CasterDowned>{0} is downed.</ABT_CasterDowned>
+	<ABT_MustHaveMeleeWeapon>{0} must have a melee weapon equipped.</ABT_MustHaveMeleeWeapon>
+	<ABT_MustHaveRangedWeapon>{0} must have a ranged weapon equipped.</ABT_MustHaveRangedWeapon>
+	<ABT_BlockedByHediff>Unavailable while affected by {0}.</ABT_BlockedByHediff>
+	<ABT_ToggleOn>Active. Use again to stop.</ABT_ToggleOn>
+	<ABT_ToggleOff>Inactive.</ABT_ToggleOff>
+
+	<!-- Healing -->
+	<ABT_HealDesc>Heals up to {0} injuries by {1} HP each.</ABT_HealDesc>
+	<ABT_NothingToHeal>{0} has no injuries to heal.</ABT_NothingToHeal>
+	<ABT_NothingToCure>{0} has nothing this ability can cure.</ABT_NothingToCure>
+	<ABT_CureFailed>The attempt to cure {0} failed.</ABT_CureFailed>
+
+	<!-- Resurrection -->
+	<ABT_ResurrectionNeedsCorpse>Resurrector nanites need a humanlike corpse.</ABT_ResurrectionNeedsCorpse>
+	<ABT_ResurrectionExpired>{0} has decayed too far for the nanites to restart.</ABT_ResurrectionExpired>
+	<ABT_ResurrectionHeadless>{0} has no head left for the nanites to restart.</ABT_ResurrectionHeadless>
+	<ABT_ResurrectionFailed>The nanite revival failed: the body is gone, headless or too far decayed.</ABT_ResurrectionFailed>
+	<ABT_RequiresHediff>Only a pawn with {0} can use this.</ABT_RequiresHediff>
+	<ABT_ResurrectionSucceeded>The resurrector nanites have restarted {0}.</ABT_ResurrectionSucceeded>
+
+	<!-- Misc -->
+	<ABT_Crit>Critical!</ABT_Crit>
+
+	<!-- Ability energy -->
+	<ABT_EnergyInbuilt>Energy</ABT_EnergyInbuilt>
+	<ABT_EnergyInspect>Ability energy: {0} / {1}</ABT_EnergyInspect>
+	<ABT_EnergyTip>Energy for abilities. Regains {0} per second.</ABT_EnergyTip>
+	<ABT_EnergyCost>Energy cost: {0}</ABT_EnergyCost>
+	<ABT_EnergyCostAll>Energy cost: the whole pool, which must be full</ABT_EnergyCostAll>
+	<ABT_NotEnoughEnergy>Not enough energy ({0} needed, {1} left).</ABT_NotEnoughEnergy>
+	<ABT_AuraOutOfEnergy>{0} ran out of energy: {1} ended.</ABT_AuraOutOfEnergy>
+	<ABT_InspiredByHymn>Inspired by {0}'s archotech fury.</ABT_InspiredByHymn>
+	<ABT_TechnoBitRepair>T-Petrone repair</ABT_TechnoBitRepair>
+	<ABT_TechnoBitRepairDesc>Let the T-Petrone repair damaged buildings and mechanoids of this pawn's faction nearby.</ABT_TechnoBitRepairDesc>
+	<ABT_LightActive>An eye of the archotech is open. Using this again closes it.</ABT_LightActive>
+</LanguageData>

@@ -1,0 +1,41 @@
+# AI tooling
+.claude/
+.codex/
+.cursor/
+.aider*
+.windsurf/
+.opencode/
+.copilot/
+.superpowers/
+AGENTS.md
+CLAUDE.md
+CLAUDE.local.md
+GEMINI.md
+docs/superpowers/
+
+# VS Code
+.vscode/
+*.code-workspace
+.history/
+
+# Visual Studio and build output
+.vs/
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+*.pdb
+
+# Python
+__pycache__/
+*.pyc
+
+# Player site build output (site/build.py)
+site/_build/
+_site/
+
+# Archives and OS clutter
+*.zip
+Thumbs.db
+desktop.ini
+.DS_Store

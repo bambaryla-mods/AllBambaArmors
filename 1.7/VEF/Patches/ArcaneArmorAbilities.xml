@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!--
+		Arcane abilities and energy pools on this mod's armor (abilities/ABILITY_MAP.md).
+		Energy: Advanced Spacer medium = 100; Solar x1.25, Ultra x1.25 more, Kwazaari x1.25 more; light/medium/heavy x0.75/1/1.25.
+		Each pool refills from empty in 200 seconds. Missing defs (Royalty-only prestige) are skipped quietly.
+	-->
+
+	<!-- flanker armor: spacer light, 75 energy -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="ABT_Apparel_AS_ReconArmor"]</xpath>
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/ThingDef[defName="ABT_Apparel_AS_ReconArmor"]/comps</xpath>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="ABT_Apparel_AS_ReconArmor"]/comps</xpath>
+				<value>
+					<li Class="VEF.Abilities.CompProperties_AbilitiesApparel">
+						<abilities>
+							<li>ABT_ShadowStrike</li>
+						</abilities>
+					</li>
+					<li Class="AllBambaArmors.CompProperties_AbilityEnergy">
+						<maxEnergy>75</maxEnergy>
+						<regenPerSecond>0.375</regenPerSecond>
+						<barColor>(0.3, 0.55, 0.95)</barColor>
+					</li>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="ABT_Apparel_AS_ReconArmor"]</xpath>
+				<value>
+					<comps>
+						<li Class="VEF.Abilities.CompProperties_AbilitiesApparel">
+							<abilities>
+								<li>ABT_ShadowStrike</li>
+							</abilities>
+						</li>
+						<li Class="AllBambaArmors.CompProperties_AbilityEnergy">
+							<maxEnergy>75</maxEnergy>
+							<regenPerSecond>0.375</regenPerSecond>
+							<barColor>(0.3, 0.55, 0.95)</barColor>
+						</li>
+					</comps>
+				</value>
+			</nomatch>
+		</match>
+	</Operation>
+
+	<!-- vanguard armor: spacer medium, 100 energy -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="ABT_Apparel_AS_MarineArmor"]</xpath>
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/ThingDef[defName="ABT_Apparel_AS_MarineArmor"]/comps</xpath>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="ABT_Apparel_AS_MarineArmor"]/comps</xpath>
+				<value>
+					<li Class="VEF.Abilities.CompProperties_AbilitiesApparel">
+						<abilities>
+							<li>ABT_AntiArmor</li>
+						</abilities>
+					</li>
+					<li Class="AllBambaArmors.CompProperties_AbilityEnergy">
+						<maxEnergy>100</maxEnergy>
+						<regenPerSecond>0.5</regenPerSecond>
+						<barColor>(0.3, 0.55, 0.95)</barColor>
+					</li>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="ABT_Apparel_AS_MarineArmor"]</xpath>
+				<value>
+					<comps>
+						<li Class="VEF.Abilities.CompProperties_AbilitiesApparel">
+							<abilities>
+								<li>ABT_AntiArmor</li>
+							</abilities>
+						</li>
+						<li Class="AllBambaArmors.CompProperties_AbilityEnergy">
+							<maxEnergy>100</maxEnergy>
+							<regenPerSecond>0.5</regenPerSecond>
+							<barColor>(0.3, 0.55, 0.95)</barColor>
+						</li>
+					</comps>
+				</value>
+			</nomatch>
+		</match>
+	</Operation>
+
+	<!-- prestige vanguard armor (Royalty): spacer medium, 100 energy; same as vanguard -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="ABT_Apparel_AS_PrestigeMarineArmor"]</xpath>
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/ThingDef[defName="ABT_Apparel_AS_PrestigeMarineArmor"]/comps</xpath>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="ABT_Apparel_AS_PrestigeMarineArmor"]/comps</xpath>
+				<value>
+					<li Class="VEF.Abilities.CompProperties_AbilitiesApparel">
+						<abilities>
+							<li>ABT_AntiArmor</li>
+						</abilities>
+					</li>
+					<li Class="AllBambaArmors.CompProperties_AbilityEnergy">
+						<maxEnergy>100</maxEnergy>
+						<regenPerSecond>0.5</regenPerSecond>
+						<barColor>(0.3, 0.55, 0.95)</barColor>
+					</li>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="ABT_Apparel_AS_PrestigeMarineArmor"]</xpath>
+				<value>
+					<comps>
+						<li Class="VEF.Abilities.CompProperties_AbilitiesApparel">
+							<abilities>
+								<li>ABT_AntiArmor</li>
+							</abilities>
+						</li>
+						<li Class="AllBambaArmors.CompProperties_AbilityEnergy">
+							<maxEnergy>100</maxEnergy>
+							<regenPerSecond>0.5</regenPerSecond>
+							<barColor>(0.3, 0.55, 0.95)</barColor>
+						</li>
+					</comps>
+				</value>
+			</nomatch>
+		</match>
+	</Operation>
+
+	<!-- breacher armor: spacer heavy, 125 energy -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="ABT_Apparel_AS_CataphractArmor"]</xpath>
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/ThingDef[defName="ABT_Apparel_AS_CataphractArmor"]/comps</xpath>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="ABT_Apparel_AS_CataphractArmor"]/comps</xpath>
+				<value>
+					<li Class="VEF.Abilities.CompProperties_AbilitiesApparel">
+						<abilities>
+							<li>ABT_EMP</li>
+						</abilities>
+					</li>
+					<li Class="AllBambaArmors.CompProperties_AbilityEnergy">
+						<maxEnergy>125</maxEnergy>
+						<regenPerSecond>0.625</regenPerSecond>
+						<barColor>(0.3, 0.55, 0.95)</barColor>
+					</li>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="ABT_Apparel_AS_CataphractArmor"]</xpath>
+				<value>
+					<comps>
+						<li Class="VEF.Abilities.CompProperties_AbilitiesApparel">
+							<abilities>
+								<li>ABT_EMP</li>
+							</abilities>
+						</li>
+						<li Class="AllBambaArmors.CompProperties_AbilityEnergy">
+							<maxEnergy>125</maxEnergy>
+							<regenPerSecond>0.625</regenPerSecond>
+							<barColor>(0.3, 0.55, 0.95)</barColor>
+						</li>
+					</comps>
+				</value>
+			</nomatch>
+		</match>
+	</Operation>
+
+	<!-- glitter suit: ultra medium, 156 energy; abilities in UltraArmorAbilities.xml -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="ABT_Apparel_Ultra_Armor"]</xpath>
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/ThingDef[defName="ABT_Apparel_Ultra_Armor"]/comps</xpath>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="ABT_Apparel_Ultra_Armor"]/comps</xpath>
+				<value>
+					<li Class="AllBambaArmors.CompProperties_AbilityEnergy">
+						<maxEnergy>156</maxEnergy>
+						<regenPerSecond>0.78</regenPerSecond>
+						<barColor>(0.85, 0.45, 0.9)</barColor>
+					</li>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="ABT_Apparel_Ultra_Armor"]</xpath>
+				<value>
+					<comps>
+						<li Class="AllBambaArmors.CompProperties_AbilityEnergy">
+							<maxEnergy>156</maxEnergy>
+							<regenPerSecond>0.78</regenPerSecond>
+							<barColor>(0.85, 0.45, 0.9)</barColor>
+						</li>
+					</comps>
+				</value>
+			</nomatch>
+		</match>
+	</Operation>
+
+	<!-- prestige glitter suit (Royalty): ultra medium, 156 energy; abilities in UltraArmorAbilities.xml -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="ABT_Apparel_Ultra_PrestigeArmor"]</xpath>
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/ThingDef[defName="ABT_Apparel_Ultra_PrestigeArmor"]/comps</xpath>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="ABT_Apparel_Ultra_PrestigeArmor"]/comps</xpath>
+				<value>
+					<li Class="AllBambaArmors.CompProperties_AbilityEnergy">
+						<maxEnergy>156</maxEnergy>
+						<regenPerSecond>0.78</regenPerSecond>
+						<barColor>(0.85, 0.45, 0.9)</barColor>
+					</li>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="ABT_Apparel_Ultra_PrestigeArmor"]</xpath>
+				<value>
+					<comps>
+						<li Class="AllBambaArmors.CompProperties_AbilityEnergy">
+							<maxEnergy>156</maxEnergy>
+							<regenPerSecond>0.78</regenPerSecond>
+							<barColor>(0.85, 0.45, 0.9)</barColor>
+						</li>
+					</comps>
+				</value>
+			</nomatch>
+		</match>
+	</Operation>
+
+</Patch>

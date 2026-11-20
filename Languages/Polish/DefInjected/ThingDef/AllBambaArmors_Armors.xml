@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <ABT_Apparel_IND_ReconHelmet.label>lekki hełm</ABT_Apparel_IND_ReconHelmet.label>
+  <ABT_Apparel_IND_ReconHelmet.description>Oferuje podstawową ochronę przed żywiołami, ogniem i odpryskami. Używany głównie przez personel pomocniczy. Nie powinien być używany przeciwko zmechanizowanym zagrożeniom.</ABT_Apparel_IND_ReconHelmet.description>
+  <ABT_Apparel_IND_ReconArmor.label>lekki kombinezon</ABT_Apparel_IND_ReconArmor.label>
+  <ABT_Apparel_IND_ReconArmor.description>Oferuje podstawową ochronę przed żywiołami, ogniem i odpryskami. Używany głównie przez personel pomocniczy. Nie powinien być używany przeciwko zmechanizowanym zagrożeniom.</ABT_Apparel_IND_ReconArmor.description>
+  <ABT_Apparel_IND_MarineHelmet.label>hełm bojowy</ABT_Apparel_IND_MarineHelmet.label>
+  <ABT_Apparel_IND_MarineHelmet.description>Wersja uzupełniająca lekką linię kombinezonów, oferująca lepszą ochronę i trwałość do walki na pierwszej linii. Dobrze radzi sobie z ostrzałem zaporowym, ale i tak ustąpi przed dużymi kalibrami i materiałami wybuchowymi.</ABT_Apparel_IND_MarineHelmet.description>
+  <ABT_Apparel_IND_MarineArmor.label>kombinezon bojowy</ABT_Apparel_IND_MarineArmor.label>
+  <ABT_Apparel_IND_MarineArmor.description>Wersja uzupełniająca lekką linię kombinezonów, oferująca lepszą ochronę i trwałość do walki na pierwszej linii. Dobrze radzi sobie z ostrzałem zaporowym, ale i tak ustąpi przed dużymi kalibrami i materiałami wybuchowymi.</ABT_Apparel_IND_MarineArmor.description>
+  <ABT_Apparel_IND_CataphractHelmet.label>pancerzowy hełm</ABT_Apparel_IND_CataphractHelmet.label>
+  <ABT_Apparel_IND_CataphractHelmet.description>Pancerzowy hełm to najmocniejsza ochrona, jaką można uzyskać przed zasilanym pancerzem. Zaprojektowany jako ochrona dla saperów bez nadmiernej masy, wytrzyma większość konwencjonalnych zagrożeń.</ABT_Apparel_IND_CataphractHelmet.description>
+  <ABT_Apparel_IND_CataphractArmor.label>ciężki kombinezon</ABT_Apparel_IND_CataphractArmor.label>
+  <ABT_Apparel_IND_CataphractArmor.description>Ciężki kombinezon to najcięższa ochrona, jaką można uzyskać przed zasilanym pancerzem. Zaprojektowany jako ochrona saperska bez nadmiernej masy, wytrzyma większość konwencjonalnych zagrożeń.</ABT_Apparel_IND_CataphractArmor.description>
+  <ABT_Apparel_IND_PrestigeCataphractHelmet.label>prestiżowy pancerzowy hełm</ABT_Apparel_IND_PrestigeCataphractHelmet.label>
+  <ABT_Apparel_IND_PrestigeCataphractHelmet.description>Prestiżowa, szlachetna wersja oryginalnego pancerzowego hełmu, która poświęca ochronę na rzecz stylu. Pancerzowy hełm to najmocniejsza ochrona, jaką można uzyskać przed zasilanym pancerzem. Zaprojektowany jako ochrona dla saperów bez nadmiernej masy, wytrzyma większość konwencjonalnych zagrożeń.</ABT_Apparel_IND_PrestigeCataphractHelmet.description>
+  <ABT_Apparel_IND_PrestigeCataphractArmor.label>prestiżowy ciężki kombinezon</ABT_Apparel_IND_PrestigeCataphractArmor.label>
+  <ABT_Apparel_IND_PrestigeCataphractArmor.description>Prestiżowa, szlachetna wersja oryginalnego ciężkiego kombinezonu, która poświęca ochronę na rzecz stylu. Ciężki kombinezon to najcięższa ochrona, jaką można uzyskać przed zasilanym pancerzem. Zaprojektowany jako ochrona saperska bez nadmiernej masy, wytrzyma większość konwencjonalnych zagrożeń.</ABT_Apparel_IND_PrestigeCataphractArmor.description>
+
+  <ABT_Apparel_AS_ReconHelmet.label>hełm skrzydłowego</ABT_Apparel_AS_ReconHelmet.label>
+  <ABT_Apparel_AS_ReconHelmet.description>Lekki i zwrotny hełm zasilany energią, zaprojektowany jako wojskowy odpowiednik zbroi zwiadowczej. W zakresie ochrony odpowiada pancerzowi morskiego typu przy mniejszej wadze.</ABT_Apparel_AS_ReconHelmet.description>
+  <ABT_Apparel_AS_ReconArmor.label>zbroja skrzydłowego</ABT_Apparel_AS_ReconArmor.label>
+  <ABT_Apparel_AS_ReconArmor.description>Lekki i zwrotny zasilany pancerz zaprojektowany jako wojskowy odpowiednik zbroi zwiadowczej. W zakresie ochrony odpowiada pancerzowi morskiego typu przy mniejszej wadze.</ABT_Apparel_AS_ReconArmor.description>
+  <ABT_Apparel_AS_MarineHelmet.label>hełm awangardy</ABT_Apparel_AS_MarineHelmet.label>
+  <ABT_Apparel_AS_MarineHelmet.description>Podstawa nowoczesnych armii poza obrzeżem. Oferuje ochronę na poziomie kataphractu bez kosztu mobilności, dzięki czemu żołnierze awangardy śmieją się niebezpieczeństwu w twarz.</ABT_Apparel_AS_MarineHelmet.description>
+  <ABT_Apparel_AS_MarineArmor.label>zbroja awangardy</ABT_Apparel_AS_MarineArmor.label>
+  <ABT_Apparel_AS_MarineArmor.description>Podstawa nowoczesnych armii poza obrzeżem. Oferuje ochronę na poziomie kataphractu bez kosztu mobilności, dzięki czemu żołnierze awangardy śmieją się niebezpieczeństwu w twarz.</ABT_Apparel_AS_MarineArmor.description>
+  <ABT_Apparel_AS_CataphractHelmet.label>hełm szturmowy</ABT_Apparel_AS_CataphractHelmet.label>
+  <ABT_Apparel_AS_CataphractHelmet.description>Specjalistyczny hełm kosmicznego żołnierza, używany w bojowych strefach przestrzeni pełnych ognia. Hełmy szturmowe pozwalają przebić się przez ogień dział PD, są ciężkie i trudne do penetracji.</ABT_Apparel_AS_CataphractHelmet.description>
+  <ABT_Apparel_AS_CataphractArmor.label>zbroja szturmowa</ABT_Apparel_AS_CataphractArmor.label>
+  <ABT_Apparel_AS_CataphractArmor.description>Pancerz kosmiczny używany w bojowych strefach przestrzeni pełnych ognia. Zbroja szturmowa pozwala przebić się przez ogień dział PD, jest ciężka i trudna do penetracji.</ABT_Apparel_AS_CataphractArmor.description>
+  <ABT_Apparel_AS_PrestigeMarineHelmet.label>prestiżowy hełm awangardy</ABT_Apparel_AS_PrestigeMarineHelmet.label>
+  <ABT_Apparel_AS_PrestigeMarineHelmet.description>Prestiżowa, szlachetna wersja oryginalnego hełmu awangardy, która poświęca ochronę na rzecz stylu. Podstawa nowoczesnych armii poza obrzeżem. Oferuje ochronę na poziomie kataphractu bez kosztu mobilności, dzięki czemu żołnierze awangardy śmieją się niebezpieczeństwu w twarz.</ABT_Apparel_AS_PrestigeMarineHelmet.description>
+  <ABT_Apparel_AS_PrestigeMarineArmor.label>prestiżowa zbroja awangardy</ABT_Apparel_AS_PrestigeMarineArmor.label>
+  <ABT_Apparel_AS_PrestigeMarineArmor.description>Prestiżowa, szlachetna wersja oryginalnej zbroi awangardy, która poświęca ochronę na rzecz stylu. Podstawa nowoczesnych armii poza obrzeżem. Oferuje ochronę na poziomie kataphractu bez kosztu mobilności, dzięki czemu żołnierze awangardy śmieją się niebezpieczeństwu w twarz.</ABT_Apparel_AS_PrestigeMarineArmor.description>
+
+  <ABT_Apparel_Ultra_Helmet.label>hełm brokatowy</ABT_Apparel_Ultra_Helmet.label>
+  <ABT_Apparel_Ultra_Helmet.description>Hełm będący częścią całego zestawu zbroi glitter. Nie ma on nazwy na obrzeżach, nie istnieje tam naprawdę — to mit. Jest czymś więcej niż zwykłym pancerzem; chwilowo łączy się z nosicielem, by wykonywać zadania i chronić go. Oferowana ochrona jest niezrównana i nieosiągalna dla zwykłego rymowalca.</ABT_Apparel_Ultra_Helmet.description>
+  <ABT_Apparel_Ultra_Armor.label>hełm brokatowy</ABT_Apparel_Ultra_Armor.label>
+  <ABT_Apparel_Ultra_Armor.description>Zbroja będąca częścią całego zestawu glitter. Nie ma nazwy na obrzeżach — to mit. Jest czymś więcej niż zwykłym pancerzem; chwilowo łączy się z nosicielem, by wykonywać zadania i chronić go. Oferowana ochrona jest niezrównana i nieosiągalna dla zwykłego rymowalca.</ABT_Apparel_Ultra_Armor.description>
+  <ABT_Apparel_Ultra_PrestigeHelmet.label>prestiżowy hełm brokatowy</ABT_Apparel_Ultra_PrestigeHelmet.label>
+  <ABT_Apparel_Ultra_PrestigeHelmet.description>Prestiżowa, szlachetna wersja oryginalnego hełmu brokatowego, która poświęca ochronę na rzecz stylu. Hełm będący częścią całego zestawu zbroi glitter. Nie ma on nazwy na obrzeżach, nie istnieje tam naprawdę — to mit. Jest czymś więcej niż zwykłym pancerzem; chwilowo łączy się z nosicielem, by wykonywać zadania i chronić go. Oferowana ochrona jest niezrównana i nieosiągalna dla zwykłego rymowalca.</ABT_Apparel_Ultra_PrestigeHelmet.description>
+  <ABT_Apparel_Ultra_PrestigeArmor.label>prestiżowa zbroja brokatowa</ABT_Apparel_Ultra_PrestigeArmor.label>
+  <ABT_Apparel_Ultra_PrestigeArmor.description>Prestiżowa, szlachetna wersja oryginalnej zbroi brokatowej, która poświęca ochronę na rzecz stylu. Zbroja będąca częścią całego zestawu glitter. Nie ma nazwy na obrzeżach — to mit. Jest czymś więcej niż zwykłym pancerzem; chwilowo łączy się z nosicielem, by wykonywać zadania i chronić go. Oferowana ochrona jest niezrównana i nieosiągalna dla zwykłego rymowalca.</ABT_Apparel_Ultra_PrestigeArmor.description>
+</LanguageData>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Armors For All Post-Medieval Tech Levels</name>
+  <packageId>Bamba.AllBambaArmors</packageId>
+  <author>Bambaryla, Pesky, KylarZ, Samael Gray</author>
+  <url>https://databobek.github.io/AllBambaArmors/</url>
+  <supportedVersions>
+    <li>1.6</li>
+    <li>1.7</li>
+  </supportedVersions>
+  <loadAfter>
+    <li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+    <li>CETeam.CombatExtended</li>
+  </loadAfter>
+  <description>A comprehensive armor suite adding 7 armor sets across 3 tiers of technology:
+
+• Armored Suits (Tech Level: Industrial) - Light, Combat and Heavy-duty suits
+• Advanced Spacer (Tech Level: Spacer) - Flanker, Vanguard and Breacher armors with enhanced protection over vanilla.
+• Glitter (Tech Level: Ultra) - Top-tier armor that can only be found or received as a reward
+
+Includes matching helmets for each armor variant.
+Full Combat Extended compatibility.
+Includes researches for each armor.
+
+All Bamba Armors are crafted at the Fabrication Bench.
+
+Credits:
+* Komandor Bambaryła - Design
+* KylarZ - Testing and design breakdowns
+* Pesky - All Armor and Helmet Textures
+* Samael Gray - XML definitions and CE patching
+
+* Inspirations:
+- Light Suit is based on a light armor from the game "Menace" by Overhype Studios - go check it out: https://store.steampowered.com/app/2432860/MENACE/
+- Combat Suit is based on the base armor from the game Helldivers 2 by Arrowhead Studios - https://store.steampowered.com/app/553850/HELLDIVERS_2/
+- Heavy Suit is based on a design from the movie Starship Troopers: Annihilation
+- Flanker Armor is based on the armor from the Halo franchise
+- Vanguard Armor is based on another armor from the Halo franchise
+- Breacher Armor is based on the designs from the GloryHammer music video Die With a Sword In My Hand - https://youtu.be/l7FdL1LArWo
+- Ultra is an original design by Pesky
+- The armor abilities are inspired by A RimWorld of Magic by Torann and JecsTools by jecrell
+
+
+</description>
+</ModMetaData>

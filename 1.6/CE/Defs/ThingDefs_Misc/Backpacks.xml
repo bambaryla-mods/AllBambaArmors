@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef Name="ABA_NoQualityWearableBase" ParentName="ApparelBase" Abstract="True">
+    <techLevel>Ultra</techLevel>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+      <defaultIngredientFilter>
+        <categories>
+          <li>Root</li>
+        </categories>
+        <disallowedThingDefs>
+          <li>Gold</li>
+          <li>Silver</li>
+          <li>Plasteel</li>
+          <li>Jade</li>
+          <li>Uranium</li>
+          <li MayRequire="Ludeon.RimWorld.Anomaly">Bioferrite</li>
+          <li MayRequire="Ludeon.RimWorld.Odyssey">Obsidian</li>
+        </disallowedThingDefs>
+      </defaultIngredientFilter>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef Name="ABA_BackpackBase" ParentName="ABA_NoQualityWearableBase" Abstract="True">
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>2</drawSize>
+    </graphicData>
+    <apparel>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <careIfDamaged>false</careIfDamaged>
+      <wearPerDay>0</wearPerDay>
+      <bodyPartGroups>
+        <li>Shoulders</li>
+        <li>Torso</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Backpack</li>
+      </layers>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+      <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+    </apparel>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <tradeTags>
+      <li>Clothing</li>
+    </tradeTags>
+  </ThingDef>
+
+  <ThingDef ParentName="ABA_BackpackBase">
+    <defName>ABA_Backpack_Industrial</defName>
+    <label>industrial backpack</label>
+    <description>A sturdy backpack that distributes weight and increases the wearer's carrying capacity.</description>
+    <techLevel>Industrial</techLevel>
+    <graphicData>
+      <texPath>Backpacks/Industrial_Backpack_north</texPath>
+    </graphicData>
+    <apparel>
+      <wornGraphicPath>Backpacks/Industrial_Backpack</wornGraphicPath>
+      <useWornGraphicMask>true</useWornGraphicMask>
+      <wornGraphicData>
+        <male>
+          <scale>(1.3,1.3)</scale>
+        </male>
+        <female>
+          <scale>(1.3,1.3)</scale>
+        </female>
+        <thin>
+          <scale>(1.3,1.3)</scale>
+        </thin>
+        <hulk>
+          <scale>(1.75,1.75)</scale>
+        </hulk>
+        <fat>
+          <scale>(1.3,1.3)</scale>
+        </fat>
+        <renderUtilityAsPack>true</renderUtilityAsPack>
+      </wornGraphicData>
+    </apparel>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>3</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <costStuffCount>40</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <equippedStatOffsets>
+      <CarryBulk>30</CarryBulk>
+    </equippedStatOffsets>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <WorkToMake>8000</WorkToMake>
+      <Mass>1.0</Mass>
+      <Bulk>3</Bulk>
+      <WornBulk>0</WornBulk>
+      <Flammability>1.0</Flammability>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <modExtensions>
+      <li Class="CombatExtended.ApparelDefExtension">
+        <isBackpack>true</isBackpack>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="ABA_BackpackBase">
+    <defName>ABA_Backpack_Spacer</defName>
+    <label>spacer backpack</label>
+    <description>A lightweight backpack woven from synthread that distributes weight and increases the wearer's carrying capacity.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Backpacks/Spacer_Backpack_north</texPath>
+    </graphicData>
+    <apparel>
+      <wornGraphicPath>Backpacks/Spacer_Backpack</wornGraphicPath>
+      <useWornGraphicMask>true</useWornGraphicMask>
+      <wornGraphicData>
+        <male>
+          <scale>(1.3,1.3)</scale>
+        </male>
+        <female>
+          <scale>(1.3,1.3)</scale>
+        </female>
+        <thin>
+          <scale>(1.3,1.3)</scale>
+        </thin>
+        <hulk>
+          <scale>(1.75,1.75)</scale>
+        </hulk>
+        <fat>
+          <scale>(1.3,1.3)</scale>
+        </fat>
+        <renderUtilityAsPack>true</renderUtilityAsPack>
+      </wornGraphicData>
+    </apparel>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <Synthread>60</Synthread>
+      <ComponentSpacer>1</ComponentSpacer>
+    </costList>
+    <equippedStatOffsets>
+      <CarryBulk>45</CarryBulk>
+    </equippedStatOffsets>
+    <statBases>
+      <MaxHitPoints>240</MaxHitPoints>
+      <WorkToMake>9600</WorkToMake>
+      <Mass>0.85</Mass>
+      <Bulk>3</Bulk>
+      <WornBulk>0</WornBulk>
+      <Flammability>0.8</Flammability>
+      <Insulation_Cold>1</Insulation_Cold>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <modExtensions>
+      <li Class="CombatExtended.ApparelDefExtension">
+        <isBackpack>true</isBackpack>
+        <isRadioPack>true</isRadioPack>
+      </li>
+      <li Class="CombatExtended.PartialArmorExt">
+        <stats>
+          <li>
+            <ArmorRating_Sharp>8</ArmorRating_Sharp>
+            <parts>
+              <li>Torso</li>
+            </parts>
+          </li>
+          <li>
+            <ArmorRating_Blunt>12</ArmorRating_Blunt>
+            <parts>
+              <li>Torso</li>
+            </parts>
+          </li>
+        </stats>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="ABA_BackpackBase">
+    <defName>ABA_Backpack_Ultra</defName>
+    <label>ultra backpack</label>
+    <description>An ultralight backpack woven from hyperweave that distributes weight and increases the wearer's carrying capacity.</description>
+    <techLevel>Ultra</techLevel>
+    <graphicData>
+      <texPath>Backpacks/Ultra_Backpack_north</texPath>
+    </graphicData>
+    <apparel>
+      <wornGraphicPath>Backpacks/Ultra_Backpack</wornGraphicPath>
+      <useWornGraphicMask>false</useWornGraphicMask>
+      <wornGraphicData>
+        <male>
+          <scale>(1.3,1.3)</scale>
+        </male>
+        <female>
+          <scale>(1.1,1.1)</scale>
+        </female>
+        <thin>
+          <scale>(1.3,1.3)</scale>
+        </thin>
+        <hulk>
+          <scale>(1.75,1.75)</scale>
+        </hulk>
+        <fat>
+          <scale>(1.3,1.3)</scale>
+        </fat>
+        <renderUtilityAsPack>true</renderUtilityAsPack>
+      </wornGraphicData>
+    </apparel>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>9</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <Hyperweave>50</Hyperweave>
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <equippedStatOffsets>
+      <CarryBulk>60</CarryBulk>
+      <MechControlGroups MayRequire="Ludeon.RimWorld.Biotech">1</MechControlGroups>
+    </equippedStatOffsets>
+    <statBases>
+      <MaxHitPoints>360</MaxHitPoints>
+      <WorkToMake>11520</WorkToMake>
+      <Mass>0.7</Mass>
+      <Bulk>3</Bulk>
+      <WornBulk>0</WornBulk>
+      <Flammability>0.64</Flammability>
+      <Insulation_Cold>1.2</Insulation_Cold>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <modExtensions>
+      <li Class="CombatExtended.ApparelDefExtension">
+        <isBackpack>true</isBackpack>
+        <isRadioPack>true</isRadioPack>
+      </li>
+      <li Class="CombatExtended.PartialArmorExt">
+        <stats>
+          <li>
+            <ArmorRating_Sharp>16</ArmorRating_Sharp>
+            <parts>
+              <li>Torso</li>
+            </parts>
+          </li>
+          <li>
+            <ArmorRating_Blunt>24</ArmorRating_Blunt>
+            <parts>
+              <li>Torso</li>
+            </parts>
+          </li>
+        </stats>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

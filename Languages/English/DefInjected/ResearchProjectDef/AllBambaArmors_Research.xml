@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <ABT_Research_Tab.label>All-Bamba Tech</ABT_Research_Tab.label>
+  <ABT_Research_Tab.generalTitle>Researches for items in All-Bamba series</ABT_Research_Tab.generalTitle>
+  <ABT_Research_Tab.generalDescription>Unlock weapons from all kinds of tech levels.</ABT_Research_Tab.generalDescription>
+
+  <ABT_Research_IND_ReconArmor.label>light suit</ABT_Research_IND_ReconArmor.label>
+  <ABT_Research_IND_ReconArmor.description>Offers basic protection from the elements, gunfire and related shrapnel. Mainly utilized by support personnel. Should not be deployed against mechanized threats.</ABT_Research_IND_ReconArmor.description>
+  <ABT_Research_IND_MarineArmor.label>combat suit</ABT_Research_IND_MarineArmor.label>
+  <ABT_Research_IND_MarineArmor.description>A companion to the light line of suits, the combat variant offers better protection and durability for frontline combat. While it is decent for surviving suppressing fire, it will still buckle against large calibers and high explosives.</ABT_Research_IND_MarineArmor.description>
+  <ABT_Research_IND_CataphractArmor.label>heavy-duty suit</ABT_Research_IND_CataphractArmor.label>
+  <ABT_Research_IND_CataphractArmor.description>The heavy-duty suit is the heaviest of the heavy protection you can get before having to power the armor. Designed as bomb-squad protection minus the bulkiness, the heavy-duty suit will survive most conventional threats.</ABT_Research_IND_CataphractArmor.description>
+
+  <ABT_Research_AS_ReconArmor.label>flanker armor</ABT_Research_AS_ReconArmor.label>
+  <ABT_Research_AS_ReconArmor.description>Light and agile powered suit of armor designed as combat replacement of the recon armors. In terms of protection, it's a marine armor with reduced weight and increased.</ABT_Research_AS_ReconArmor.description>
+  <ABT_Research_AS_MarineArmor.label>vanguard armor</ABT_Research_AS_MarineArmor.label>
+  <ABT_Research_AS_MarineArmor.description>The mainstay of modern militaries outside of the rim. Offering a cataphract-level of protection without the induced mobility cost, Vanguard marines laugh in the face of danger.</ABT_Research_AS_MarineArmor.description>
+  <ABT_Research_AS_CataphractArmor.label>breacher armor</ABT_Research_AS_CataphractArmor.label>
+  <ABT_Research_AS_CataphractArmor.description>Space marine-issued armor for combat deployments in the firey hell of space combat zones, Breacher armors are used to get through PD cannon fire onto an enemy ship. They are heavy and hardly-penetrable.</ABT_Research_AS_CataphractArmor.description>
+</LanguageData>

@@ -1,0 +1,431 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<ThingDef Name="ArmorNonMachineableBase" ParentName="ApparelBase" Abstract="True">
+		<smeltable>False</smeltable>
+	</ThingDef>
+
+	<!-- ==================== Ultra Armor ==================== -->
+
+	<ThingDef ParentName="ArmorNonMachineableBase">
+		<defName>ABT_Apparel_Ultra_Helmet</defName>
+		<label>glitter helmet</label>
+		<description>A helmet which is a part of the entire glitter armor set. It has no name in the rim, it does not exist in the rim, it's a myth. It's beyond an armored helmet; it temporarily fuses with the user to be able to perform tasks and protect the wearer. Protection offered by the set is unparalleled and unachievable for the common rimworlder.</description>
+		<techLevel>Ultra</techLevel>
+		<costList />
+		<!-- <recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<researchPrerequisites>
+				<li>ShieldBelt</li>
+				<li>PoweredArmor</li>
+				<li>AdvancedFabrication</li>
+			</researchPrerequisites>
+			<skillRequirements>
+				<Crafting>18</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker> -->
+		<graphicData>
+			<texPath>UltraMarine/ultra_armor_Helmet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<uiIconScale>1.3</uiIconScale>
+		<statBases>
+			<WorkToMake>60000</WorkToMake>
+			<MarketValue>10000</MarketValue>
+			<MaxHitPoints>350</MaxHitPoints>
+			<Mass>1.0</Mass>
+			<Flammability>0.05</Flammability>
+			<ArmorRating_Sharp>1.8</ArmorRating_Sharp>
+			<ArmorRating_Blunt>1.0</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.9</ArmorRating_Heat>
+			<Insulation_Cold>20</Insulation_Cold>
+			<Insulation_Heat>10</Insulation_Heat>
+			<EquipDelay>3</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<ShootingAccuracyPawn>1.0</ShootingAccuracyPawn>
+			<AimingDelayFactor>-0.2</AimingDelayFactor>
+			<HypoxiaResistance MayRequire="kentington.saveourship2">0.75</HypoxiaResistance>
+			<DecompressionResistance MayRequire="kentington.saveourship2">0.75</DecompressionResistance>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.7</VacuumResistance>
+		</equippedStatOffsets>
+		<thingCategories>
+			<li>ApparelArmor</li>
+		</thingCategories>
+		<tradeTags>
+			<li>HiTechArmor</li>
+		</tradeTags>
+		<!-- <costList>
+			<ComponentSpacer>6</ComponentSpacer>
+			<Plasteel>200</Plasteel>
+			<Hyperweave>50</Hyperweave>
+			<BroadshieldCore MayRequire="Ludeon.Rimworld.Royalty">1</BroadshieldCore>
+		</costList> -->
+		<apparel>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<wornGraphicPath>UltraMarine/ultra_armor_Helmet</wornGraphicPath>
+			<blocksAddedPartWoundGraphics>true</blocksAddedPartWoundGraphics>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<tags>
+				<li></li>
+			</tags>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+			<soundWear>Wear_PowerArmor</soundWear>
+			<soundRemove>Remove_PowerArmor</soundRemove>
+		</apparel>
+		<thingSetMakerTags>
+			<li>RewardStandardLowFreq</li>
+		</thingSetMakerTags>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(0.9,0.9,0.9)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.33,0.33,0.33)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.65,0.65,0.65)</only>
+				</li>
+				<li>
+					<weight>6</weight>
+					<min>(0.3,0.3,0.3)</min>
+					<max>(0.5,0.5,0.5)</max>
+				</li>
+			</options>
+		</colorGenerator>
+		<comps>
+			<li Class="CompProperties_Biocodable" />
+			<li MayRequire="kentington.saveourship2">
+				<compClass>SaveOurShip2.CompEVA</compClass>
+			</li>
+		</comps>
+		<allowedArchonexusCount>1</allowedArchonexusCount>
+	</ThingDef>
+
+	<ThingDef ParentName="ArmorNonMachineableBase">
+		<defName>ABT_Apparel_Ultra_Armor</defName>
+		<label>glitter suit</label>
+		<description>A suit of armor which is a part of the entire glitter armor set. It has no name in the rim, it does not exist in the rim, it's a myth. It's beyond an armored suit; it temporarily fuses with the user to be able to perform tasks and protect the wearer. Protection offered by the set is unparalleled and unachievable for the common rimworlder.</description>
+		<techLevel>Ultra</techLevel>
+		<tickerType>Normal</tickerType>
+		<!-- <recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<researchPrerequisites>
+				<li>ShieldBelt</li>
+				<li>PoweredArmor</li>
+				<li>AdvancedFabrication</li>
+			</researchPrerequisites>
+			<skillRequirements>
+				<Crafting>18</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker> -->
+		<graphicData>
+			<texPath>UltraMarine/ultra_armor</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<uiIconScale>1.3</uiIconScale>
+		<statBases>
+			<WorkToMake>120000</WorkToMake>
+			<MarketValue>20000</MarketValue>
+			<MaxHitPoints>700</MaxHitPoints>
+			<Mass>10</Mass>
+			<Flammability>0.05</Flammability>
+			<ArmorRating_Sharp>1.8</ArmorRating_Sharp>
+			<ArmorRating_Blunt>1.0</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.9</ArmorRating_Heat>
+			<Insulation_Cold>90</Insulation_Cold>
+			<Insulation_Heat>25</Insulation_Heat>
+			<EquipDelay>10</EquipDelay>
+			<EnergyShieldRechargeRate>0.25</EnergyShieldRechargeRate>
+			<EnergyShieldEnergyMax>1.0</EnergyShieldEnergyMax>
+		</statBases>
+		<equippedStatOffsets>
+			<MeleeHitChance>0.25</MeleeHitChance>
+			<MeleeDamageFactor>0.25</MeleeDamageFactor>
+			<MoveSpeed>0.5</MoveSpeed>
+			<HypoxiaResistance MayRequire="kentington.saveourship2">0.5</HypoxiaResistance>
+			<DecompressionResistance MayRequire="kentington.saveourship2">0.5</DecompressionResistance>
+			<VacuumSpeedMultiplier MayRequire="kentington.saveourship2">2</VacuumSpeedMultiplier>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.7</VacuumResistance>
+		</equippedStatOffsets>
+		<thingCategories>
+			<li>ApparelArmor</li>
+		</thingCategories>
+		<tradeTags>
+			<li>HiTechArmor</li>
+		</tradeTags>
+		<!-- <costList>
+			<ComponentSpacer>24</ComponentSpacer>
+			<Plasteel>400</Plasteel>
+			<Uranium>150</Uranium>
+			<Hyperweave>50</Hyperweave>
+		</costList> -->
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Neck</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Waist</li>
+				<li>Legs</li>
+				<li>Hands</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<wornGraphicPath>UltraMarine/ultra_armor</wornGraphicPath>
+			<blocksAddedPartWoundGraphics>true</blocksAddedPartWoundGraphics>
+			<layers>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li>PrestigeCombatGear</li>
+			</tags>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+			<soundWear>Wear_PowerArmor</soundWear>
+			<soundRemove>Remove_PowerArmor</soundRemove>
+		</apparel>
+		<thingSetMakerTags>
+			<li>RewardStandardLowFreq</li>
+		</thingSetMakerTags>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(0.9,0.9,0.9)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.33,0.33,0.33)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.65,0.65,0.65)</only>
+				</li>
+				<li>
+					<weight>6</weight>
+					<min>(0.3,0.3,0.3)</min>
+					<max>(0.5,0.5,0.5)</max>
+				</li>
+			</options>
+		</colorGenerator>
+		<comps>
+			<li Class="CompProperties_Shield">
+				<blocksRangedWeapons>false</blocksRangedWeapons>
+			</li>
+			<li Class="CompProperties_Biocodable" />
+			<li MayRequire="kentington.saveourship2">
+				<compClass>SaveOurShip2.CompEVA</compClass>
+			</li>
+		</comps>
+		<allowedArchonexusCount>1</allowedArchonexusCount>
+	</ThingDef>
+
+	<!-- ==================== Prestige Ultra Armor ==================== -->
+
+	<ThingDef ParentName="ArmorNonMachineableBase" MayRequire="ludeon.rimworld.royalty">
+		<defName>ABT_Apparel_Ultra_PrestigeHelmet</defName>
+		<label>prestige glitter helmet</label>
+		<description>A prestige, noble version of the original Glitter Helmet, that trades protection for flair. A helmet which is a part of the entire glitter armor set. It has no name in the rim, it does not exist in the rim, it's a myth. It's beyond an armored helmet; it temporarily fuses with the user to be able to perform tasks and protect the wearer. Protection offered by the set is unparalleled and unachievable for the common rimworlder.</description>
+		<techLevel>Ultra</techLevel>
+		<costList />
+		<graphicData>
+			<texPath>PrestigeUltra/Prestige_Ultra_Helmet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<uiIconScale>1.3</uiIconScale>
+		<statBases>
+			<WorkToMake>50000</WorkToMake>
+			<MarketValue>15000</MarketValue>
+			<MaxHitPoints>300</MaxHitPoints>
+			<Mass>1.3</Mass>
+			<Flammability>0.05</Flammability>
+			<ArmorRating_Sharp>1.6</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.82</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.82</ArmorRating_Heat>
+			<Insulation_Cold>15</Insulation_Cold>
+			<Insulation_Heat>7</Insulation_Heat>
+			<EquipDelay>4</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<ShootingAccuracyPawn>0.5</ShootingAccuracyPawn>
+			<AimingDelayFactor>-0.1</AimingDelayFactor>
+			<HypoxiaResistance MayRequire="kentington.saveourship2">0.75</HypoxiaResistance>
+			<DecompressionResistance MayRequire="kentington.saveourship2">0.75</DecompressionResistance>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.7</VacuumResistance>
+		</equippedStatOffsets>
+		<thingCategories>
+			<li>ApparelArmor</li>
+		</thingCategories>
+		<tradeTags>
+			<li>HiTechArmor</li>
+		</tradeTags>
+		<apparel>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<wornGraphicPath>PrestigeUltra/Prestige_Ultra_Helmet</wornGraphicPath>
+			<blocksAddedPartWoundGraphics>true</blocksAddedPartWoundGraphics>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<tags>
+				<li>Royal</li>
+				<li>RoyalTier6</li>
+			</tags>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+			<soundWear>Wear_PowerArmor</soundWear>
+			<soundRemove>Remove_PowerArmor</soundRemove>
+		</apparel>
+		<thingSetMakerTags>
+			<li>RewardStandardLowFreq</li>
+		</thingSetMakerTags>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(0.9,0.9,0.9)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.33,0.33,0.33)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.65,0.65,0.65)</only>
+				</li>
+				<li>
+					<weight>6</weight>
+					<min>(0.3,0.3,0.3)</min>
+					<max>(0.5,0.5,0.5)</max>
+				</li>
+			</options>
+		</colorGenerator>
+		<comps>
+			<li Class="CompProperties_Biocodable" />
+			<li MayRequire="kentington.saveourship2">
+				<compClass>SaveOurShip2.CompEVA</compClass>
+			</li>
+		</comps>
+		<allowedArchonexusCount>1</allowedArchonexusCount>
+	</ThingDef>
+
+	<ThingDef ParentName="ArmorNonMachineableBase" MayRequire="ludeon.rimworld.royalty">
+		<defName>ABT_Apparel_Ultra_PrestigeArmor</defName>
+		<label>prestige glitter suit</label>
+		<description>A prestige, noble version of the original Glitter Suit, that trades protection for flair. A suit of armor which is a part of the entire glitter armor set. It has no name in the rim, it does not exist in the rim, it's a myth. It's beyond an armored suit; it temporarily fuses with the user to be able to perform tasks and protect the wearer. Protection offered by the set is unparalleled and unachievable for the common rimworlder.</description>
+		<techLevel>Ultra</techLevel>
+		<tickerType>Normal</tickerType>
+		<costList />
+		<graphicData>
+			<texPath>PrestigeUltra/Prestige_Ultra</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<uiIconScale>1.3</uiIconScale>
+		<statBases>
+			<WorkToMake>107500</WorkToMake>
+			<MarketValue>30000</MarketValue>
+			<MaxHitPoints>600</MaxHitPoints>
+			<Mass>11</Mass>
+			<Flammability>0.05</Flammability>
+			<ArmorRating_Sharp>1.6</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.82</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.82</ArmorRating_Heat>
+			<Insulation_Cold>82</Insulation_Cold>
+			<Insulation_Heat>20</Insulation_Heat>
+			<EquipDelay>12</EquipDelay>
+			<EnergyShieldRechargeRate>0.12</EnergyShieldRechargeRate>
+			<EnergyShieldEnergyMax>0.5</EnergyShieldEnergyMax>
+		</statBases>
+		<equippedStatOffsets>
+			<MeleeHitChance>0.12</MeleeHitChance>
+			<MeleeDamageFactor>0.12</MeleeDamageFactor>
+			<MoveSpeed>0.38</MoveSpeed>
+			<HypoxiaResistance MayRequire="kentington.saveourship2">0.5</HypoxiaResistance>
+			<DecompressionResistance MayRequire="kentington.saveourship2">0.5</DecompressionResistance>
+			<VacuumSpeedMultiplier MayRequire="kentington.saveourship2">2</VacuumSpeedMultiplier>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.7</VacuumResistance>
+		</equippedStatOffsets>
+		<thingCategories>
+			<li>ApparelArmor</li>
+		</thingCategories>
+		<tradeTags>
+			<li>HiTechArmor</li>
+		</tradeTags>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Neck</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Waist</li>
+				<li>Legs</li>
+				<li>Hands</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<wornGraphicPath>PrestigeUltra/Prestige_Ultra</wornGraphicPath>
+			<blocksAddedPartWoundGraphics>true</blocksAddedPartWoundGraphics>
+			<layers>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li>Royal</li>
+				<li>RoyalTier6</li>
+			</tags>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+			<soundWear>Wear_PowerArmor</soundWear>
+			<soundRemove>Remove_PowerArmor</soundRemove>
+		</apparel>
+		<thingSetMakerTags>
+			<li>RewardStandardLowFreq</li>
+		</thingSetMakerTags>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(0.9,0.9,0.9)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.33,0.33,0.33)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.65,0.65,0.65)</only>
+				</li>
+				<li>
+					<weight>6</weight>
+					<min>(0.3,0.3,0.3)</min>
+					<max>(0.5,0.5,0.5)</max>
+				</li>
+			</options>
+		</colorGenerator>
+		<comps>
+			<li Class="CompProperties_Shield">
+				<blocksRangedWeapons>false</blocksRangedWeapons>
+			</li>
+			<li Class="CompProperties_Biocodable" />
+			<li MayRequire="kentington.saveourship2">
+				<compClass>SaveOurShip2.CompEVA</compClass>
+			</li>
+		</comps>
+		<allowedArchonexusCount>1</allowedArchonexusCount>
+	</ThingDef>
+
+</Defs>
+
+

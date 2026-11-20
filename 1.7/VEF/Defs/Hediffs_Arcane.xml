@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Buffs and effects for the abilities in Abilities_Arcane.xml. Durations are in ticks (60 = 1 s, 2500 = 1 h). -->
+
+	<HediffDef Name="ABT_AbilityBuffBase" Abstract="True">
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<defaultLabelColor>(0.55, 0.8, 1)</defaultLabelColor>
+	</HediffDef>
+
+	<HediffDef Name="ABT_AbilityDebuffBase" Abstract="True">
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>true</isBad>
+		<scenarioCanAdd>false</scenarioCanAdd>
+	</HediffDef>
+
+	<!-- ===== Melee and mobility ===== -->
+
+	<!-- Also carries the caster back to where the strike started when it ends. -->
+	<HediffDef ParentName="ABT_AbilityBuffBase">
+		<defName>ABT_ShadowStrikeHasteHediff</defName>
+		<label>tacskip haste</label>
+		<description>Moving in a blur after a tacskip: melee attacks come twice as fast.</description>
+		<stages>
+			<li>
+				<statFactors>
+					<MeleeCooldownFactor>0.5</MeleeCooldownFactor>
+				</statFactors>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>300~300</disappearsAfterTicks>
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<HediffDef ParentName="ABT_AbilityBuffBase">
+		<defName>ABT_ShadowStrikeVeilHediff</defName>
+		<label>skip distortion</label>
+		<description>Hidden by skip distortion, invisible to others for a moment.</description>
+		<comps>
+			<li Class="HediffCompProperties_Invisibility">
+				<visibleToPlayer>true</visibleToPlayer>
+			</li>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>120~180</disappearsAfterTicks>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath" />
+		</comps>
+	</HediffDef>
+
+</Defs>
